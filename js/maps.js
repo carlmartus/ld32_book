@@ -19,7 +19,7 @@ var mapWalls = {
 
 
 function mapsGlobals() {
-	mapShader = loadShader(['test.vert'], ['test.frag'], function (prog) {
+	mapShader = loadShader(['map.vert'], ['map.frag'], function (prog) {
 		prog.bindAttribute(0, 'atLoc');
 		prog.bindAttribute(1, 'atUv');
 	});
@@ -57,6 +57,8 @@ function mapsLoad(name) {
 	gl.bindBuffer(gl.ARRAY_BUFFER, mapVbo);
 	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
 
+	crReset();
+
 	// Populate map
 	var objs = data.layers[1].objects;
 	for (var i=0; i<objs.length; i++) {
@@ -67,6 +69,10 @@ function mapsLoad(name) {
 		switch (o.type) {
 			case 'start' :
 				plSpawn(cx, cy);
+				break;
+
+			case 'munk' :
+				crSpawnMunk(cx, cy);
 				break;
 		}
 	}

@@ -33,6 +33,7 @@ function downloaded() {
 
 	mapsGlobals();
 	plGlobals();
+	spGlobals();
 
 	gl.bindTexture(gl.TEXTURE_2D, tex0);
 

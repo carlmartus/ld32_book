@@ -3,6 +3,20 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var jsInline = require('gulp-js-inline');
 
+gulp.task('js', ['glsl'], function() {
+	return gulp.src(['js/*.js', 'get/*.js'])
+		.pipe(concat('book.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('www'));
+});
+
+gulp.task('ext', function() {
+	return gulp.src('ext/*.js')
+		.pipe(concat('bundle.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('www'));
+});
+
 gulp.task('glsl', function() {
 	return gulp.src('glsl/*.c')
 		.pipe(jsInline({ 'name': 'glslStore' }))
@@ -10,10 +24,5 @@ gulp.task('glsl', function() {
 		.pipe(gulp.dest('gen'));
 });
 
-gulp.task('ext', function() {
-	return gulp.src('ext/*.js')
-		 .pipe(concat('bundle.min.js'))
-		 .pipe(uglify())
-		 .pipe(gulp.dest('www'));
-});
+gulp.task('default', ['js', 'ext', 'glsl']);
 

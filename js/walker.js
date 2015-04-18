@@ -81,8 +81,10 @@ Walker.prototype.frame = function(ft, x, y, rot) {
 		this.t = 0.0;
 	} else {
 		this.t += ft * this.speed;
-		if (this.t >= this.active.length) {
-			this.t = this.t % this.active.length;
+		if (this.t < 1.0) {
+			this.t = 1.0;
+		} else if (this.t >= this.active.length) {
+			this.t = 1.0 + ((this.t - 1.0) % (this.active.length - 1));
 		}
 	}
 };

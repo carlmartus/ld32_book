@@ -22,11 +22,11 @@ function Creep(x, y, size) {
 	this.rot = 0.0;
 	this.size = size;
 
-	this.walker = new Walker(0.2,
-			animation(getTexId(0, 8), 1),
-			animation(getTexId(0, 9), 1),
-			animation(getTexId(0, 10), 1),
-			animation(getTexId(0, 11), 1),
+	this.walker = new Walker(3.0,
+			animation(getTexId(0, 8), 3),
+			animation(getTexId(0, 9), 3),
+			animation(getTexId(0, 10), 3),
+			animation(getTexId(0, 11), 3),
 			null, null);
 }
 

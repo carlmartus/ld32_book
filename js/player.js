@@ -2,7 +2,7 @@ var plX, plY, plZ, plRx;
 var plLookX, plLookY;
 var plSideX, plSideY;
 
-var plSpeed = 2.0;
+var plSpeed = 2.0, plSize = 0.2;
 
 function plGlobals() {
 }
@@ -41,9 +41,12 @@ function plFrame(ft) {
 
 		var dirX = plLookX*movX + plSideX*movY;
 		var dirY = plSideX*movX + plSideY*movY;
+		dirX *= ft;
+		dirY *= ft;
 
-		plX += dirX*ft;
-		plY += dirY*ft;
+		var aff = mapsWalk(plX, plY, dirX, dirY, plSize);
+		plX = aff[0];
+		plY = aff[1];
 	}
 
 	// Update camera

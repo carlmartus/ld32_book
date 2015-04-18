@@ -43,7 +43,8 @@ function mapsLoad(name) {
 	for (var i=0; i<mapW*mapH; i++) {
 		var x = i % mapW;
 		var y = Math.floor(i / mapW);
-		mapGrid.push(parseMapGrid(grid[i]-1, x, y));
+		mapGrid.push(
+				new MapGrid(x, y, false, grid[i]-1, tilesets));
 	}
 
 	var verts = [];
@@ -71,6 +72,30 @@ function mapsLoad(name) {
 	}
 }
 
+function mapsWalk(x, y, dx, dy, size) {
+	var cellId = Math.floor(y)*mapW + Math.floor(x);
+
+	x += dx;
+	y += dy;
+
+	if (cellId >= 0 && cellId < mapGrid.length) {
+		var cell = mapGrid[cellId];
+
+		if (cell.planes) {
+			for (var i=0; i<cell.planes.length; i++) {
+				var dist = cell.planes[i].dist(x, y);
+				if (dist < size) {
+					var mov = cell.planes[i].move(x, y, size);
+					x = mov[0];
+					y = mov[1];
+				}
+			}
+		}
+	}
+
+	return [ x, y ];
+}
+
 function mapsRender() {
 	if (!mapName) return;
 
@@ -88,10 +113,6 @@ function mapsRender() {
 
 	gl.disableVertexAttribArray(1);
 	gl.disableVertexAttribArray(0);
-}
-
-function parseMapGrid(num, x, y) {
-	return new MapGrid(x, y, false, num);
 }
 
 function pushMapVert(arr, x, y, z, texId, offX, offY) {
@@ -118,11 +139,27 @@ function pushWall(arr, x0, y0, x1, y1, texId) {
 	pushMapVert(arr, x1, y1, tall, texId, 1.0, tall);
 }
 
-function MapGrid(x, y, blocked, texId) {
+function MapGrid(x, y, blocked, texId, tilesets) {
 	this.x = x;
 	this.y = y;
 	this.blocked = blocked;
 	this.texId = texId;
+
+	if (tilesets.tiles[this.texId]) {
+		var ter = tilesets.tiles[this.texId].terrain;
+		var block = [
+			mapWallTiles[ter[0]],
+			mapWallTiles[ter[1]],
+			mapWallTiles[ter[2]],
+			mapWallTiles[ter[3]] ];
+
+		if (
+				!(block[0] && block[1] && block[2] && block[3]) &&
+				 (block[0] || block[1] || block[2] || block[3])) {
+			this.block = block;
+			this.planes = makeColPlanes(block, x, y);
+		}
+	}
 }
 
 MapGrid.prototype.pushVerts = function(arr, tilesets) {
@@ -167,5 +204,54 @@ MapGrid.prototype.pushVerts = function(arr, tilesets) {
 			}
 		}
 	}
+}
+
+// Mathematical 2D plane
+function Plane(nx, ny, x, y) {
+	var lenInv = Math.sqrt(nx*nx + ny*ny);
+	this.a = nx * lenInv;
+	this.b = ny * lenInv;
+	this.c = -(this.a*x + this.b*y);
+}
+
+Plane.prototype.dist = function(x, y) {
+	return this.a*x + this.b*y + this.c;
+}
+
+Plane.prototype.move = function(x, y, space) {
+	var dist = this.dist(x, y);
+	x += this.a*(space - dist);
+	y += this.b*(space - dist);
+	return [ x, y ];
+}
+
+function makeColPlanes(block, x, y) {
+	var planes = [];
+
+	if (block[0] && block[2])
+		planes.push(new Plane(1, 0, x, y));
+
+	if (block[1] && block[3])
+		planes.push(new Plane(-1, 0, x+1, y));
+
+	if (block[0] && block[1])
+		planes.push(new Plane(0, 1, x, y));
+
+	if (block[2] && block[3])
+		planes.push(new Plane(0, -1, x, y+1));
+
+	if (block[0])
+		planes.push(new Plane(1, 1, x, y));
+
+	if (block[1])
+		planes.push(new Plane(-1, 1, x+1, y));
+
+	if (block[2])
+		planes.push(new Plane(1, -1, x, y+1));
+
+	if (block[3])
+		planes.push(new Plane(-1, -1, x+1, y+1));
+
+	return planes;
 }
 

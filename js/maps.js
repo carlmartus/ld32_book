@@ -39,7 +39,7 @@ function mapsLoad(name) {
 		mapGrid[i].pushVerts(verts);
 	}
 
-	mapVertCount = verts.length;
+	mapVertCount = verts.length / 2;
 	mapVbo = gl.createBuffer();
 	gl.bindBuffer(gl.ARRAY_BUFFER, mapVbo);
 	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
@@ -55,7 +55,7 @@ function mapsRender() {
 	gl.enableVertexAttribArray(0);
 	gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
 
-	gl.drawArrays(gl.TRIANGLES, 0, mapVertCount / 2);
+	gl.drawArrays(gl.TRIANGLES, 0, mapVertCount);
 
 	gl.disableVertexAttribArray(0);
 }

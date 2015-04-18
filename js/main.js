@@ -1,5 +1,5 @@
 var gl;
-var screenW = 400, screenH = 300;
+var screenW = 640, screenH = 640;
 var blockRender = false;
 var tex0;
 var tex0Dim = 8;

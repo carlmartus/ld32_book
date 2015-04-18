@@ -5,8 +5,14 @@ function crReset() {
 }
 
 function crSpawnMunk(x, y) {
-	crList.push(new Creep(x, y, 0.4, 0.4, makeBrianPassive));
-	//crList.push(new Creep(x, y, 0.4, 0.4, makeBrianGuard));
+	crList.push(new Creep(x, y, 0.4, 0.4, makeBrianPassive,
+				new Walker(3.0,
+					animation(getTexId(0, 8), 3),
+					animation(getTexId(0, 9), 3),
+					animation(getTexId(0, 10), 3),
+					animation(getTexId(0, 11), 3),
+					animation(getTexId(0, 12), 3),
+					animation(getTexId(0, 13), 3))));
 }
 
 function crRender() {
@@ -17,7 +23,7 @@ function crFrame(ft) {
 	for (var i=0; i<crList.length; i++) crList[i].frame(ft);
 }
 
-function Creep(x, y, size, speed, brainMaker) {
+function Creep(x, y, size, speed, brainMaker, walker) {
 	this.x = x;
 	this.y = y;
 	this.dX = this.dY = 0.0;
@@ -26,13 +32,7 @@ function Creep(x, y, size, speed, brainMaker) {
 	this.speed = speed;
 	this.speedMul = 1.0;
 
-	this.walker = new Walker(3.0,
-			animation(getTexId(0, 8), 3),
-			animation(getTexId(0, 9), 3),
-			animation(getTexId(0, 10), 3),
-			animation(getTexId(0, 11), 3),
-			animation(getTexId(0, 12), 3),
-			animation(getTexId(0, 13), 3));
+	this.walker = walker;
 
 	this.brain = null;
 	this.brain = brainMaker(this);

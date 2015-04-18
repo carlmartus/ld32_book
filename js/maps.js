@@ -68,8 +68,6 @@ function mapsLoad(name) {
 				plSpawn(cx, cy);
 				break;
 		}
-
-		console.log(cx, cy);
 	}
 }
 
@@ -130,12 +128,12 @@ function MapGrid(x, y, blocked, texId) {
 MapGrid.prototype.pushVerts = function(arr, tilesets) {
 	if (!mapWalls[this.texId]) {
 		pushMapVert(arr, this.x,	this.y,		0.0, this.texId, 0.0, 0.0);
-		pushMapVert(arr, this.x+1,	this.y,		0.0, this.texId, 1.0, 0.0);
 		pushMapVert(arr, this.x,	this.y+1,	0.0, this.texId, 0.0, 1.0);
+		pushMapVert(arr, this.x+1,	this.y,		0.0, this.texId, 1.0, 0.0);
 
 		pushMapVert(arr, this.x+1,	this.y+1,	0.0, this.texId, 1.0, 1.0);
-		pushMapVert(arr, this.x,	this.y+1,	0.0, this.texId, 0.0, 1.0);
 		pushMapVert(arr, this.x+1,	this.y,		0.0, this.texId, 1.0, 0.0);
+		pushMapVert(arr, this.x,	this.y+1,	0.0, this.texId, 0.0, 1.0);
 	}
 
 	if (tilesets.tiles[this.texId]) {
@@ -157,7 +155,7 @@ MapGrid.prototype.pushVerts = function(arr, tilesets) {
 
 		if (mapWallTiles[ter[3]] && ter[3] == ter[2]) {
 			if (ter[3] != ter[0] || ter[3] != ter[1]) {
-				pushWall(arr, this.x, this.y+1, this.x+1, this.y+1,
+				pushWall(arr, this.x+1, this.y+1, this.x, this.y+1,
 						tilesets.terrains[ter[3]].tile);
 			}
 		}

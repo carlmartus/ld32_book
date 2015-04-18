@@ -16,6 +16,7 @@ function frame(ft) {
 
 function downloaded() {
 	mapsGlobals();
+	gl.bindTexture(gl.TEXTURE_2D, tex0);
 
 	mapsLoad('tex0');
 

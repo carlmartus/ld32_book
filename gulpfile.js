@@ -4,7 +4,7 @@ var uglify = require('gulp-uglify');
 var jsInline = require('gulp-js-inline');
 
 gulp.task('js', ['glsl'], function() {
-	return gulp.src(['js/*.js', 'get/*.js'])
+	return gulp.src(['js/*.js', 'gen/*.js'])
 		.pipe(concat('book.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('www'));

@@ -1,4 +1,5 @@
 var plX, plY, plZ, plRx;
+var plCamX, plCamY, plCamZ;
 var plLookX, plLookY;
 var plSideX, plSideY;
 
@@ -49,12 +50,13 @@ function plFrame(ft) {
 		plY = aff[1];
 	}
 
+	plCamX = plX - plLookX;
+	plCamY = plY - plLookY;
+	plCamZ = plZ + 0.1;
+
 	// Update camera
 	esMat4_camera(mvp, 1.0, 1.0, 0.01, 40.0,
-			esVec3_parse(
-				plX - plLookX,
-				plY - plLookY,
-				plZ + 0.1),
+			esVec3_parse(plCamX, plCamY, plCamZ),
 			esVec3_parse(plX, plY, plZ),
 			esVec3_parse(0.0, 0.0, 1.0));
 }

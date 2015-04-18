@@ -21,6 +21,7 @@ function frame(ft) {
 
 	plFrame(ft);
 	mapsRender();
+	crFrame(ft);
 	crRender();
 	spRender();
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="tex0" tilewidth="16" tileheight="16">
+  <image source="../www/tex0.png" width="128" height="128"/>
+  <terraintypes>
+   <terrain name="libFloor" tile="0"/>
+   <terrain name="libWall" tile="11"/>
+  </terraintypes>
+  <tile id="0" terrain="0,0,0,0"/>
+  <tile id="2" terrain="0,0,0,1"/>
+  <tile id="3" terrain="0,0,1,1"/>
+  <tile id="4" terrain="0,0,1,0"/>
+  <tile id="8" terrain="1,1,1,0"/>
+  <tile id="9" terrain="1,1,0,1"/>
+  <tile id="10" terrain="0,1,0,1"/>
+  <tile id="11" terrain="1,1,1,1"/>
+  <tile id="12" terrain="1,0,1,0"/>
+  <tile id="16" terrain="1,0,1,1"/>
+  <tile id="17" terrain="0,1,1,1"/>
+  <tile id="18" terrain="0,1,0,0"/>
+  <tile id="19" terrain="1,1,0,0"/>
+  <tile id="20" terrain="1,0,0,0"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzjYWBg4KEQ8wIxIxSD+JxALEIBFkUzD2Y+MxCzYMGsSOoJYWTzuInwDzHmCULdIUQl80gJb0IYVxhzIZkHcz+pYYmMqRGWyFgYzY2UmgczE19aG8WjeBSThgHo1gbK
+  </data>
+ </layer>
+</map>

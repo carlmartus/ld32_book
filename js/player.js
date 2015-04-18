@@ -61,3 +61,6 @@ function plFrame(ft) {
 			esVec3_parse(0.0, 0.0, 1.0));
 }
 
+function plRender() {
+}
+

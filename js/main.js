@@ -20,6 +20,7 @@ function frame(ft) {
 	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
 	plFrame(ft);
+	plRender();
 	mapsRender();
 	crFrame(ft);
 	crRender();

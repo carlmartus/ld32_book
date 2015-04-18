@@ -26,7 +26,8 @@ gulp.task('glsl', function() {
 
 gulp.task('watch', ['default'], function() {
 	gulp.watch('js/*.js', ['js']);
-	gulp.watch('glsl/*.c', ['js']);
+	gulp.watch('gen/*.js', ['js']);
+	gulp.watch('glsl/*.c', ['glsl']);
 	gulp.watch('ext/*', ['ext']);
 });
 

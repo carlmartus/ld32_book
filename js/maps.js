@@ -67,7 +67,7 @@ function mapsRender() {
 }
 
 function parseMapGrid(num, x, y) {
-	return new MapGrid(x, y, 0.0, false, 0);
+	return new MapGrid(x, y, 0.0, false, num);
 }
 
 function pushMapVert(arr, x, y, texId, offX, offY) {
@@ -77,8 +77,10 @@ function pushMapVert(arr, x, y, texId, offX, offY) {
 	arr.push(0.0);
 
 	// Uv
-	arr.push(offX * 0.125);
-	arr.push(offY * 0.125);
+	var tx = texId % tex0Dim;
+	var ty = Math.floor(texId / tex0Dim);
+	arr.push((tx + offX) * tex0DimInv);
+	arr.push((ty + offY) * tex0DimInv);
 }
 
 function MapGrid(x, y, tall, blocked, texId) {

@@ -1,0 +1,30 @@
+{
+  "name": "Book",
+  "version": "0.0.1",
+  "description": "Ludum dare 32 challenge game",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carlmartus/ld32_book.git"
+  },
+  "keywords": [
+    "ld32",
+    "ludum",
+    "dare",
+    "compo",
+    "an",
+    "unconventional",
+    "weapon",
+    "book",
+    "learn",
+    "grow"
+  ],
+  "author": "Martin Sandgren",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlmartus/ld32_book/issues"
+  },
+  "dependencies": {
+	  "gulp": "3.8.11",
+	  "gulp-uglify": "1.2.0"
+  }
+}

@@ -1,2 +1,4 @@
-# ld32_book
-Ludum dare 32 challenge
+# Ludum dare 32 game "Book"
+
+Challenge theme "An Unconventional Weapon".
+

@@ -13,5 +13,5 @@ Challenge theme "An Unconventional Weapon".
 Install local dependencies: ```npm install```.
 Compile with gulp: ```gulp```.
 
-Now you can open the file www/index.html in your browser.
+Now you can open the file ```www/index.html``` in your browser.
 

@@ -4,16 +4,16 @@
   <image source="../www/tex0.png" width="128" height="128"/>
   <terraintypes>
    <terrain name="libFloor" tile="0"/>
-   <terrain name="libWall" tile="11"/>
+   <terrain name="libWall" tile="5"/>
   </terraintypes>
   <tile id="0" terrain="0,0,0,0"/>
   <tile id="2" terrain="0,0,0,1"/>
   <tile id="3" terrain="0,0,1,1"/>
   <tile id="4" terrain="0,0,1,0"/>
+  <tile id="5" terrain="1,1,1,1"/>
   <tile id="8" terrain="1,1,1,0"/>
   <tile id="9" terrain="1,1,0,1"/>
   <tile id="10" terrain="0,1,0,1"/>
-  <tile id="11" terrain="1,1,1,1"/>
   <tile id="12" terrain="1,0,1,0"/>
   <tile id="16" terrain="1,0,1,1"/>
   <tile id="17" terrain="0,1,1,1"/>
@@ -23,7 +23,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJztksEKgCAMQBfWobRDWf//q01QGGsyZdcd3kEYj/lYAoBk5ESWSnnvyGPgZb7mD8gqsJF5DeqLyn/CgL/MX3XuVnwR/r0k32jvLPTi9BofxNf2n21J0VrOktmOVh/t1bs1x3Hm+AC2TAct
+   eJxjY2BgYKMy5gRiETIxFxbzeIGYEYiZgZgFC2ZFkkNnc+MxD5scTJ6bABsZC0LtE8JjnjDUf6JobFxuwIdh9mHzPy43kIJx+XPUPPqZh5yHYGkGW94gxU2MaJgSNw5289DzCLXyxihGxQA7Ugs2
   </data>
  </layer>
 </map>

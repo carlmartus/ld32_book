@@ -7,6 +7,15 @@ var mapVbo = null;
 var mapShader = null;
 var mapShaderUnMvp = null;
 
+var mapWallTiles = {
+	1: true
+};
+
+var mapWalls = {
+	5: 2.0
+};
+
+
 function mapsGlobals() {
 	mapShader = loadShader(['test.vert'], ['test.frag'], function (prog) {
 		prog.bindAttribute(0, 'atLoc');
@@ -26,8 +35,7 @@ function mapsLoad(name) {
 	mapH = data.height;
 
 	var grid = data.layers[0].data;
-	console.log(data);
-	console.log(grid);
+	var tilesets = data.tilesets[0];
 
 	mapGrid = [];
 	for (var i=0; i<mapW*mapH; i++) {
@@ -38,7 +46,7 @@ function mapsLoad(name) {
 
 	var verts = [];
 	for (var i=0; i<mapGrid.length; i++) {
-		mapGrid[i].pushVerts(verts);
+		mapGrid[i].pushVerts(verts, tilesets);
 	}
 
 	mapVertCount = verts.length / mapVertElems;
@@ -67,14 +75,14 @@ function mapsRender() {
 }
 
 function parseMapGrid(num, x, y) {
-	return new MapGrid(x, y, 0.0, false, num);
+	return new MapGrid(x, y, false, num);
 }
 
-function pushMapVert(arr, x, y, texId, offX, offY) {
+function pushMapVert(arr, x, y, z, texId, offX, offY) {
 	// Loc
-	arr.push(x + offX);
-	arr.push(y + offY);
-	arr.push(0.0);
+	arr.push(x);
+	arr.push(y);
+	arr.push(z);
 
 	// Uv
 	var tx = texId % tex0Dim;
@@ -83,21 +91,65 @@ function pushMapVert(arr, x, y, texId, offX, offY) {
 	arr.push((ty + offY) * tex0DimInv);
 }
 
-function MapGrid(x, y, tall, blocked, texId) {
+function pushWall(arr, x0, y0, x1, y1, texId) {
+	var tall = mapWalls[texId];
+	pushMapVert(arr, x0, y0, 0.0, texId, 0.0, 0.0);
+	pushMapVert(arr, x1, y1, 0.0, texId, 1.0, 0.0);
+	pushMapVert(arr, x0, y0, tall, texId, 0.0, tall);
+
+	pushMapVert(arr, x0, y0, tall, texId, 0.0, tall);
+	pushMapVert(arr, x1, y1, 0.0, texId, 1.0, 0.0);
+	pushMapVert(arr, x1, y1, tall, texId, 1.0, tall);
+}
+
+function MapGrid(x, y, blocked, texId) {
 	this.x = x;
 	this.y = y;
-	this.tall = tall;
 	this.blocked = blocked;
 	this.texId = texId;
 }
 
-MapGrid.prototype.pushVerts = function(arr) {
-	pushMapVert(arr, this.x, this.y, this.texId, 0.0, 0.0);
-	pushMapVert(arr, this.x, this.y, this.texId, 1.0, 0.0);
-	pushMapVert(arr, this.x, this.y, this.texId, 0.0, 1.0);
+MapGrid.prototype.pushVerts = function(arr, tilesets) {
+	if (!mapWalls[this.texId]) {
+		pushMapVert(arr, this.x,	this.y,		0.0, this.texId, 0.0, 0.0);
+		pushMapVert(arr, this.x+1,	this.y,		0.0, this.texId, 1.0, 0.0);
+		pushMapVert(arr, this.x,	this.y+1,	0.0, this.texId, 0.0, 1.0);
 
-	pushMapVert(arr, this.x, this.y, this.texId, 1.0, 1.0);
-	pushMapVert(arr, this.x, this.y, this.texId, 0.0, 1.0);
-	pushMapVert(arr, this.x, this.y, this.texId, 1.0, 0.0);
+		pushMapVert(arr, this.x+1,	this.y+1,	0.0, this.texId, 1.0, 1.0);
+		pushMapVert(arr, this.x,	this.y+1,	0.0, this.texId, 0.0, 1.0);
+		pushMapVert(arr, this.x+1,	this.y,		0.0, this.texId, 1.0, 0.0);
+	}
+
+	if (tilesets.tiles[this.texId]) {
+		var ter = tilesets.tiles[this.texId].terrain;
+
+		if (mapWallTiles[ter[0]] && ter[0] == ter[1]) {
+			if (ter[2] != ter[0] || ter[3] != ter[0]) {
+				pushWall(arr, this.x, this.y, this.x+1, this.y,
+						tilesets.terrains[ter[0]].tile);
+			}
+		}
+
+		if (mapWallTiles[ter[0]] && ter[0] == ter[2]) {
+			if (ter[1] != ter[0] || ter[3] != ter[0]) {
+				pushWall(arr, this.x, this.y+1, this.x, this.y,
+						tilesets.terrains[ter[0]].tile);
+			}
+		}
+
+		if (mapWallTiles[ter[3]] && ter[3] == ter[2]) {
+			if (ter[3] != ter[0] || ter[3] != ter[1]) {
+				pushWall(arr, this.x, this.y+1, this.x+1, this.y+1,
+						tilesets.terrains[ter[3]].tile);
+			}
+		}
+
+		if (mapWallTiles[ter[3]] && ter[3] == ter[1]) {
+			if (ter[3] != ter[0] || ter[3] != ter[2]) {
+				pushWall(arr, this.x+1, this.y, this.x+1, this.y+1,
+						tilesets.terrains[ter[3]].tile);
+			}
+		}
+	}
 }
 

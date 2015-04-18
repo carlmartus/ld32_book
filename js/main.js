@@ -26,10 +26,11 @@ function downloaded() {
 
 function main() {
 	gl = esInitGl('bookCanvas', { antialias: false });
+	gl.enable(gl.DEPTH_TEST);
 
 	mvp = esMat4_create();
 	esMat4_camera(mvp, 1.0, 1.0, 0.1, 40.0,
-			esVec3_parse(0.0, 0.0, 3,0),
+			esVec3_parse(-3.0, -1.0, 5,0),
 			esVec3_parse(5.0, 5.0, -1.0),
 			esVec3_parse(0.0, 0.0, 1.0));
 

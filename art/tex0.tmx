@@ -44,7 +44,7 @@
  </layer>
  <objectgroup name="Object Layer 1">
   <object type="start" x="31" y="50.25" width="10" height="8.5"/>
-  <object type="munk" x="56.375" y="32.5" width="3.625" height="3.75"/>
+  <object type="munk" x="119.125" y="28.25" width="3.625" height="3.75"/>
   <object type="munk" x="209.875" y="62" width="3.625" height="3.75"/>
   <object type="munk" x="210" y="37.5" width="3.625" height="3.75"/>
   <object type="munk" x="196.375" y="179.25" width="3.625" height="3.75"/>

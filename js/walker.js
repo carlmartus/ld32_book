@@ -16,6 +16,7 @@ function animation(start, len) {
 
 function Walker(speed, front, back, left, right, attack, dead) {
 	this.t = 0.0;
+	this.redirect = Math.random();
 	this.speed = speed;
 	this.x = this.y = this.rot = 0.0;
 
@@ -32,10 +33,11 @@ function Walker(speed, front, back, left, right, attack, dead) {
 
 Walker.prototype.setState = function(state) {
 	this.state = state;
-	this.refreshDirection();
 };
 
-Walker.prototype.refreshDirection = function() {
+Walker.prototype.refreshDirection = function(newRot) {
+	if (newRot) this.rot = newRot;
+
 	var tX = this.x - plCamX;
 	var tY = this.y - plCamY;
 	var tInv = 1.0 / Math.sqrt(tX*tX + tY*tY);
@@ -59,7 +61,12 @@ Walker.prototype.frame = function(ft, x, y, rot) {
 	this.x = x;
 	this.y = y;
 	this.rot = rot;
-	this.refreshDirection();
+
+	this.redirect -= ft;
+	if (this.redirect < 0.0) {
+		this.refreshDirection();
+		this.redirect += 0.5;
+	}
 
 	switch (this.state) {
 		case W_IDLE :

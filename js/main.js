@@ -3,6 +3,7 @@ var screenW = 640, screenH = 640;
 var blockRender = false;
 var tex0;
 var tex0Dim = 8;
+var tex0DimInv = 1.0 / tex0Dim;
 var mvp = null;
 
 function frame(ft) {
@@ -24,11 +25,11 @@ function downloaded() {
 }
 
 function main() {
-	gl = esInitGl('bookCanvas');
+	gl = esInitGl('bookCanvas', { antialias: false });
 
 	mvp = esMat4_create();
-	esMat4_camera(mvp, 1.5, 1.33, 0.1, 40.0,
-			esVec3_parse(-2.0, -2.0, 2,0),
+	esMat4_camera(mvp, 1.0, 1.0, 0.1, 40.0,
+			esVec3_parse(0.0, 0.0, 3,0),
 			esVec3_parse(5.0, 5.0, -1.0),
 			esVec3_parse(0.0, 0.0, 1.0));
 

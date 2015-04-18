@@ -58,6 +58,7 @@ function mapsLoad(name) {
 	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
 
 	crReset();
+	mapProxies = [];
 
 	// Populate map
 	var objs = data.layers[1].objects;
@@ -74,6 +75,23 @@ function mapsLoad(name) {
 			case 'munk' :
 				crSpawnMunk(cx, cy);
 				break;
+
+			case 'end' :
+				mapProxies.push(new Proxy(o, function(obj) {
+					mapsLoad(obj.name);
+				}));
+				break;
+		}
+	}
+}
+
+function mapsProxTest() {
+	for (var i=0; i<mapProxies.length; i++) {
+		var p = mapProxies[i];
+		if (
+				plX >= p.x0 && plX <= p.x1 &&
+				plY >= p.y0 && plY <= p.y1) {
+			p.execute();
 		}
 	}
 }
@@ -259,5 +277,18 @@ function makeColPlanes(block, x, y) {
 		planes.push(new Plane(-1, -1, x+1, y+1));
 
 	return planes;
+}
+
+function Proxy(obj, cb) {
+	this.x0 = obj.x * tex0TileInv;
+	this.y0 = obj.y * tex0TileInv;
+	this.x1 = this.x0 + obj.width * tex0TileInv;
+	this.y1 = this.y0 + obj.height * tex0TileInv;
+	this.obj = obj;
+	this.cb = cb;
+}
+
+Proxy.prototype.execute = function() {
+	this.cb(this.obj);
 }
 

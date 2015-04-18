@@ -6,6 +6,7 @@ function crReset() {
 
 function crSpawnMunk(x, y) {
 	crList.push(new Creep(x, y, 0.4, 0.4, makeBrianPassive));
+	//crList.push(new Creep(x, y, 0.4, 0.4, makeBrianGuard));
 }
 
 function crRender() {
@@ -23,13 +24,15 @@ function Creep(x, y, size, speed, brainMaker) {
 	this.rot = Math.random() * 2.0*Math.PI;
 	this.size = size;
 	this.speed = speed;
+	this.speedMul = 1.0;
 
 	this.walker = new Walker(3.0,
 			animation(getTexId(0, 8), 3),
 			animation(getTexId(0, 9), 3),
 			animation(getTexId(0, 10), 3),
 			animation(getTexId(0, 11), 3),
-			null, null);
+			animation(getTexId(0, 12), 3),
+			animation(getTexId(0, 13), 3));
 
 	this.brain = null;
 	this.brain = brainMaker(this);
@@ -39,8 +42,8 @@ function Creep(x, y, size, speed, brainMaker) {
 Creep.prototype.walk = function(dX, dY) {
 	this.rot = Math.atan2(-dY, -dX);
 	this.walker.setState(W_WALK);
-	this.dX = dX*this.speed;
-	this.dY = dY*this.speed;
+	this.dX = dX*this.speed*this.speedMul;
+	this.dY = dY*this.speed*this.speedMul;
 	this.walker.refreshDirection(this.rot);
 };
 
@@ -51,6 +54,10 @@ Creep.prototype.noWalk = function() {
 
 Creep.prototype.idle = function() {
 	this.walker.setState(W_IDLE);
+};
+
+Creep.prototype.die = function() {
+	this.walker.setState(W_DEAD);
 };
 
 Creep.prototype.frame = function(ft) {

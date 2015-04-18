@@ -1,53 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16">
- <tileset firstgid="1" name="tex0" tilewidth="16" tileheight="16">
-  <image source="../www/tex0.png" width="256" height="256"/>
-  <terraintypes>
-   <terrain name="libFloor0" tile="0"/>
-   <terrain name="libWall0" tile="5"/>
-   <terrain name="libwall1" tile="53"/>
-   <terrain name="libFloor1" tile="48"/>
-  </terraintypes>
-  <tile id="0" terrain="0,0,0,0"/>
-  <tile id="2" terrain="0,0,0,1"/>
-  <tile id="3" terrain="0,0,1,1"/>
-  <tile id="4" terrain="0,0,1,0"/>
-  <tile id="5" terrain="1,1,1,1"/>
-  <tile id="16" terrain="1,1,1,0"/>
-  <tile id="17" terrain="1,1,0,1"/>
-  <tile id="18" terrain="0,1,0,1"/>
-  <tile id="20" terrain="1,0,1,0"/>
-  <tile id="32" terrain="1,0,1,1"/>
-  <tile id="33" terrain="0,1,1,1"/>
-  <tile id="34" terrain="0,1,0,0"/>
-  <tile id="35" terrain="1,1,0,0"/>
-  <tile id="36" terrain="1,0,0,0"/>
-  <tile id="48" terrain="3,3,3,3"/>
-  <tile id="50" terrain="3,3,3,2"/>
-  <tile id="51" terrain="3,3,2,2"/>
-  <tile id="52" terrain="3,3,2,3"/>
-  <tile id="53" terrain="2,2,2,2"/>
-  <tile id="64" terrain="2,2,2,3"/>
-  <tile id="65" terrain="2,2,3,2"/>
-  <tile id="66" terrain="3,2,3,2"/>
-  <tile id="68" terrain="2,3,2,3"/>
-  <tile id="80" terrain="2,3,2,2"/>
-  <tile id="81" terrain="3,2,2,2"/>
-  <tile id="82" terrain="3,2,3,3"/>
-  <tile id="83" terrain="2,2,3,3"/>
-  <tile id="84" terrain="2,3,3,3"/>
- </tileset>
+ <tileset firstgid="1" source="tex0.tsx"/>
  <layer name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjY2BgYKMyFgRiFTKxEBbzRIGYEYiZgZgFC2ZFkkNnC+MxD5scTF6YABsZK0LtU8JjnjLUf6pobFxuwIdh9mHzPy43kIJx+XMomGdGBnYFYmcy9cKwIxCHQHEoEAdD2U4UuMkQCybXnYFAbIIFB1Ho71E8sjEAfTI3QQ==
+   eJxjY2BgYKMyFgRiFTKxEBbzRIGYEYiZgZgFC2ZFkkNnC+Mwjx2HHExemAAbGStC7VPCY54y1H+qaGxcbsCHYfZh8z8uN5CCcflzKJhnRgZ2BWJnMvXCsCMQh0BxKBAHQ9lOFLjJEAsm152BQGwCxaZAbAxlB1Hob0LhN9jTy6h5lJkHACJ+IYs=
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
+ <objectgroup name="lvl0">
   <object type="start" x="31" y="50.25" width="10" height="8.5"/>
   <object type="munk" x="119.125" y="28.25" width="3.625" height="3.75"/>
   <object type="munk" x="209.875" y="62" width="3.625" height="3.75"/>
   <object type="munk" x="210" y="37.5" width="3.625" height="3.75"/>
-  <object type="munk" x="196.375" y="179.25" width="3.625" height="3.75"/>
+  <object type="munk" x="187.75" y="186" width="3.625" height="3.75"/>
   <object type="munk" x="242.25" y="187.625" width="3.625" height="3.75"/>
+  <object name="lvl0" type="end" x="196" y="236" width="57.3333" height="82.6667"/>
+  <object type="munk" x="223.875" y="180.5" width="3.625" height="3.75"/>
+  <object type="munk" x="222.75" y="201.375" width="3.625" height="3.75"/>
  </objectgroup>
 </map>

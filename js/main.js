@@ -3,6 +3,7 @@ var screenW = 640, screenH = 640;
 var blockRender = false;
 var tex0;
 var mvp = null;
+var proxTest = 0.0;
 
 var inputMouseX = 0;
 var inputMouseY = 0;
@@ -25,6 +26,12 @@ function frame(ft) {
 	crFrame(ft);
 	crRender();
 	spRender();
+
+	proxTest -= ft;
+	if (proxTest <= 0.0) {
+		proxTest = 0.3;
+		mapsProxTest();
+	}
 }
 
 function downloaded() {

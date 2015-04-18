@@ -1,3 +1,6 @@
+/**
+ * This brain walks around his spawn point
+ */
 function makeBrianPassive(cr) {
 	return {
 		init: function() {
@@ -27,6 +30,25 @@ function makeBrianPassive(cr) {
 			}
 
 			return 0.500 + Math.random()*3.0;
+		}
+	};
+}
+
+/**
+ * Standing guard until player comes close then attack
+ */
+function makeBrianGuard(cr) {
+	return {
+		init: function() {
+			this.isDead = false;
+			return 2.5;
+		},
+		update: function() {
+			if (this.isDead) return 2;
+
+			cr.die();
+			this.isDead = true;
+			return 0.1;
 		}
 	};
 }

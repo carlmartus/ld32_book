@@ -50,9 +50,9 @@ function plFrame(ft) {
 		plY = aff[1];
 	}
 
-	plCamX = plX - plLookX;
-	plCamY = plY - plLookY;
-	plCamZ = plZ + 0.1;
+	plCamX = plX - plLookX * 2.0;
+	plCamY = plY - plLookY * 2.0;
+	plCamZ = 1.7;
 
 	// Update camera
 	esMat4_camera(mvp, 1.0, 1.0, 0.01, 40.0,

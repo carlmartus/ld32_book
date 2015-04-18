@@ -33,6 +33,11 @@ function Walker(speed, front, back, left, right, attack, dead) {
 
 Walker.prototype.setState = function(state) {
 	this.state = state;
+	switch (state) {
+		case W_FIRE :
+		case W_DEAD :
+			this.t = 0.0;
+	}
 };
 
 Walker.prototype.refreshDirection = function(newRot) {
@@ -87,11 +92,16 @@ Walker.prototype.frame = function(ft, x, y, rot) {
 	if (this.state == W_IDLE) {
 		this.t = 0.0;
 	} else {
-		this.t += ft * this.speed;
-		if (this.t < 1.0) {
-			this.t = 1.0;
-		} else if (this.t >= this.active.length) {
-			this.t = 1.0 + ((this.t - 1.0) % (this.active.length - 1));
+		if (this.state == W_WALK) {
+			this.t += ft * this.speed;
+
+			if (this.t < 1.0) {
+				this.t = 1.0;
+			} else if (this.t >= this.active.length) {
+				this.t = 1.0 + ((this.t - 1.0) % (this.active.length - 1));
+			}
+		} else if (this.t < this.active.length-1) {
+			this.t += ft * this.speed;
 		}
 	}
 };

@@ -24,7 +24,7 @@ gulp.task('glsl', function() {
 		.pipe(gulp.dest('gen'));
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', ['default'], function() {
 	gulp.watch('js/*.js', ['js']);
 	gulp.watch('glsl/*.c', ['js']);
 	gulp.watch('ext/*', ['ext']);

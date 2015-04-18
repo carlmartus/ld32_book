@@ -12,7 +12,7 @@ function plGlobals() {
 			animation(getTexId(0, 9), 3),
 			animation(getTexId(0, 10), 3),
 			animation(getTexId(0, 11), 3),
-			animation(getTexId(0, 12), 3),
+			animation(getTexId(0, 14), 3),
 			animation(getTexId(0, 13), 3));
 }
 

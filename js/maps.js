@@ -8,11 +8,13 @@ var mapShader = null;
 var mapShaderUnMvp = null;
 
 var mapWallTiles = {
-	1: true
+	1: true,
+	2: true
 };
 
 var mapWalls = {
-	5: 2.0
+	5: 2.0,
+	29: 2.0
 };
 
 

@@ -50,7 +50,7 @@ function plFrame(ft) {
 	}
 
 	// Update camera
-	esMat4_camera(mvp, 1.0, 1.0, 0.1, 40.0,
+	esMat4_camera(mvp, 1.0, 1.0, 0.01, 40.0,
 			esVec3_parse(
 				plX - plLookX,
 				plY - plLookY,

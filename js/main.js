@@ -2,10 +2,6 @@ var gl;
 var screenW = 640, screenH = 640;
 var blockRender = false;
 var tex0;
-var tex0Tile = 16;
-var tex0TileInv = 1.0 / tex0Tile;
-var tex0Dim = 16;
-var tex0DimInv = 1.0 / tex0Dim;
 var mvp = null;
 
 var inputMouseX = 0;
@@ -25,6 +21,8 @@ function frame(ft) {
 
 	plFrame(ft);
 	mapsRender();
+	crRender();
+	spRender();
 }
 
 function downloaded() {
@@ -55,6 +53,7 @@ function main() {
 	gl = esInitGl('bookCanvas', { antialias: false });
 	gl.enable(gl.DEPTH_TEST);
 	gl.enable(gl.CULL_FACE);
+	//gl.enable(gl.VERTEX_PROGRAM_POINT_SIZE);
 
 	// HTML events
 	document.addEventListener('keydown', function(event) {

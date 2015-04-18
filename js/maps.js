@@ -14,7 +14,7 @@ var mapWallTiles = {
 
 var mapWalls = {
 	5: 2.0,
-	29: 2.0
+	53: 2.0
 };
 
 
@@ -55,6 +55,22 @@ function mapsLoad(name) {
 	mapVbo = gl.createBuffer();
 	gl.bindBuffer(gl.ARRAY_BUFFER, mapVbo);
 	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
+
+	// Populate map
+	var objs = data.layers[1].objects;
+	for (var i=0; i<objs.length; i++) {
+		var o = objs[i];
+		var cx = (o.x + o.width*0.5)*tex0TileInv;
+		var cy = (o.y + o.height*0.5)*tex0TileInv;
+
+		switch (o.type) {
+			case 'start' :
+				plSpawn(cx, cy);
+				break;
+		}
+
+		console.log(cx, cy);
+	}
 }
 
 function mapsRender() {

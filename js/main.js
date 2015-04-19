@@ -55,7 +55,7 @@ function downloaded() {
 
 	gl.bindTexture(gl.TEXTURE_2D, tex0);
 
-	mapsLoad('lvl0');
+	mapsLoad('tex0');
 
 	esNextFrame(frame);
 }

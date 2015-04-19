@@ -3,11 +3,11 @@
  <tileset firstgid="1" source="tex0.tsx"/>
  <layer name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJztks0NwjAMhXPjQmkGqCwGKNAN0gFKJ0BMwM8KjI4j2dKT5UYpvXL4DqmS5+f32oYQ2gouzKnAUKmjWmcmMnumEQ7yLdOt0CNmYmbzLonmsUIP98vebsyd6c1+qtk5bzEDkj2yryvzET1vP5I5A5x3MFs9RfH1Zp7MS3ZDPc025zoaz5i15v0QHfU5m7cU/D4S3LF5R9FVj14nuG+JZDw3zlyCjrf+m3bn6NAvzFmaSZCpp+ehXWmetl891+rpfdsnevtFD/vU/xT7XqvndT5u1Cvx19um9wWy0ykR
+   eJylVNsNgzAMzF9/SskAUcQAtGUDGKBlgooJ+tqgjF5HtSXramgoH/cRFF/Odzalc67MwJGwn0GTySNcB4InbAkFY8ffEsICvkg4EXqoa5mzyuDT/SVtF8JAqKE/4QxGrfYgch9J15kwMp/VX+R3GnXeqLdFk2ddD8KNcOfeNJ94m3ztQLP2Wvy+Mo/o7KE2OjuPVt1Bvz3zikYrE93vHFrQXBjvxsyMl8wTejqldWovcBbEU8mnnqjDvRA/Md8A3LhDFWSq73ujvlNnnE2Z49F9Zk9nqvMU/ViPZ+TS71uZdz/40qw9CS/3/Q/IydqaT+EcVvLp+ZRdW8s3588/fGvwBrE+MX0=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object type="start" x="198.413" y="179.257" width="13.8253" height="7.31922" rotation="-1.27971"/>
+  <object type="start" x="32.913" y="83.757" width="13.8253" height="7.31922" rotation="-1.27971"/>
   <object name="Looks like some kind of predator has been slayin here." type="info" x="180.5" y="65.5" width="43.5" height="42.5"/>
   <object name="Stick close to the monks in these parts of the wilderness. Evil lurks here." type="munk" x="268" y="29.5" width="4.5" height="5"/>
   <object type="munk" x="283.25" y="122.75" width="8" height="6.75"/>
@@ -15,5 +15,8 @@
   <object type="wolf" x="225" y="184.75" width="8" height="6.75"/>
   <object type="munk" x="297.25" y="130.5" width="8" height="6.75"/>
   <object type="munk" x="290.583" y="141.5" width="8" height="6.75"/>
+  <object name="The wolfs are increasing in numbers my friend. I will teach you a spell to increase the number of monks. Continue down this path." type="munk" x="17.5" y="197" width="4.5" height="5"/>
+  <object type="munk" x="94.25" y="272.25" width="8" height="6.75"/>
+  <object type="munk" x="92.25" y="200.25" width="8" height="6.75"/>
  </objectgroup>
 </map>

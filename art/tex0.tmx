@@ -3,11 +3,11 @@
  <tileset firstgid="1" source="tex0.tsx"/>
  <layer name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjY2BgYKMyFgRiFTKxEBbzRIGYEYiZgZgFC2ZFkkNnC+Mwjx2HHExemAAbGStC7VPCY54y1H+qaGxcbsCHYfZh8z8uN5CCcflzuJhnhoZdgdgZi7gZCeY5AnEIFIcCcTCU7USmeSA3GWLB6O4k1rxAIDaBYlMgNoayg8g0j5rhN9jTy6h5uM0DAO0WGRs=
+   eJzd0bkKwkAQBuCIGqNWGgTFyqtQK/EgYqUieFRehfoExicQX94/MIFh2VnJamXxwTAL/87suo7juD9WgralsiavAilIQ0Yjy87U2hfycsJZfO5/qLkG3dc05LVov45SSzOYxPfp9pdmSELa81/yJooVLDX9iEfyUIAi6/G8OZzIGY5UL4S8LsygLuRFMw001Dk9pgZbNiPP28OIjGFI9cGw7w6qbEbb9+NZurwk/xu/XY/pf5F3gwtcqebvaZP3gDuEsFZybfOeMKXMkHq2eS/ad0NZAfVs897P1yN8
   </data>
  </layer>
  <objectgroup name="lvl0">
-  <object type="start" x="29.8299" y="33.9349" width="10" height="8.5" rotation="-344.244">
+  <object type="start" x="24.1632" y="29.1015" width="10" height="8.5" rotation="-344.244">
    <properties>
     <property name="rot" value="1"/>
    </properties>
@@ -21,7 +21,7 @@
   <object type="munk" x="222.75" y="201.375" width="3.625" height="3.75"/>
   <object name="Welcome apprentice to the mythical library of the old monks. Some of them are willing to talk, others are a bit more busy." type="info" x="52.3333" y="13" width="26.3333" height="74.3333"/>
   <object name="Click the screen to capture the mouse. Use arrow keys to move." type="info" x="12.3333" y="13.3333" width="28.3333" height="74.3333"/>
-  <object name="Hello fellow monk. Looks like you need to freshen up your spell casting. I'm sure your brothers will help you." type="munk" x="165.792" y="33.5833" width="3.625" height="3.75"/>
+  <object name="Hello fellow monk. Looks like you need to freshen up your spell casting. I'm sure your brothers will help you." type="munk" x="125.458" y="32.9167" width="3.625" height="3.75"/>
   <object name="Continue down this hallway to go out into the wilderness." type="info" x="194" y="205.333" width="67.6667" height="61"/>
  </objectgroup>
 </map>

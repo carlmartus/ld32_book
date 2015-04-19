@@ -5,6 +5,10 @@ var plSideX, plSideY;
 var plWalker;
 var plHp;
 
+var plHasMana = false;
+var plManaCd = 0.0;
+var plHasCasted = false;
+
 var plDisabled = 0.0;
 var plDisabledDX, plDisabledDY;
 
@@ -31,7 +35,6 @@ function plSpawn(x, y, rot) {
 }
 
 function plWeapon(wId) {
-	// console.log('Weapon ' + wId);
 }
 
 function plUpdateCage() {
@@ -60,6 +63,14 @@ function plFrame(ft) {
 		if (plHp <= 0) {
 			mapsRestart();
 			return;
+		}
+
+		// Spells
+		if (plManaCd > 0.0) {
+			plManaCd -= ft;
+		}
+		if (inputState.click && plHasMana && plManaCd <= 0.0) {
+			plCastSpell();
 		}
 
 		var movX=0.0, movY=0.0;
@@ -103,6 +114,24 @@ function plFrame(ft) {
 			esVec3_parse(plCamX, plCamY, plCamZ),
 			esVec3_parse(plX, plY, plZ),
 			esVec3_parse(0.0, 0.0, 1.0));
+}
+
+function plCastSpell() {
+	var msg = null;
+	if (!plHasCasted) {
+		plHasCasted = true;
+		msg = 'With this spell the monks shall rise above all other. One will to rule the universe';
+	}
+
+	var aff = mapsWalk(
+			plX, plY,
+			plLookX * 0.1,
+			plLookY * 0.1,
+			plSize);
+
+	paSpawn(aff[0], aff[1]);
+	crSpawnMunk(aff[0], aff[1], msg);
+	plManaCd = 3.0;
 }
 
 function plRender() {

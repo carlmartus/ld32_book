@@ -11,14 +11,16 @@ var mapWallTiles = {
 	1: true,
 	2: true,
 	5: true,
-	6: true
+	6: true,
+	8: true
 };
 
 var mapWalls = {
 	5: 2.0,
 	53: 2.0,
 	14: 2.0,
-	78: 2.0
+	78: 2.0,
+	23: 2.0
 };
 
 function mapsPopulate(obj, cx, cy) {
@@ -40,14 +42,19 @@ function mapsPopulate(obj, cx, cy) {
 		case 'info' :
 			mapProxies.push(new Proxy(obj, function(obj) {
 				infoInfo(obj.name);
-			}));
+			})); break;
+
+		case 'activate' :
+			mapProxies.push(new Proxy(obj, function(obj) {
+				plHasMana = true;
+			})); break;
 			break;
 
 		case 'end' :
 			mapProxies.push(new Proxy(obj, function(obj) {
+				gl.clearColor(0.7, 0.7, 0.9, 1.0);
 				mapsLoad(obj.name);
-			}));
-			break;
+			})); break;
 	}
 }
 

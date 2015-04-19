@@ -9,12 +9,19 @@
   <terrain name="snow" tile="15"/>
   <terrain name="snowWall" tile="14"/>
   <terrain name="snowBush" tile="78"/>
+  <terrain name="grass" tile="7"/>
+  <terrain name="wood" tile="23"/>
+  <terrain name="dirt" tile="105"/>
  </terraintypes>
  <tile id="0" terrain="0,0,0,0"/>
  <tile id="2" terrain="0,0,0,1"/>
  <tile id="3" terrain="0,0,1,1"/>
  <tile id="4" terrain="0,0,1,0"/>
  <tile id="5" terrain="1,1,1,1"/>
+ <tile id="7" terrain="7,7,7,7"/>
+ <tile id="8" terrain="7,7,7,8"/>
+ <tile id="9" terrain="7,7,8,8"/>
+ <tile id="10" terrain="7,7,8,7"/>
  <tile id="11" terrain="4,4,4,5"/>
  <tile id="12" terrain="4,4,5,5"/>
  <tile id="13" terrain="4,4,5,4"/>
@@ -24,6 +31,9 @@
  <tile id="17" terrain="1,1,0,1"/>
  <tile id="18" terrain="0,1,0,1"/>
  <tile id="20" terrain="1,0,1,0"/>
+ <tile id="23" terrain="8,8,8,8"/>
+ <tile id="24" terrain="7,8,7,8"/>
+ <tile id="26" terrain="8,7,8,7"/>
  <tile id="27" terrain="4,5,4,5"/>
  <tile id="29" terrain="5,4,5,4"/>
  <tile id="32" terrain="1,0,1,1"/>
@@ -31,6 +41,9 @@
  <tile id="34" terrain="0,1,0,0"/>
  <tile id="35" terrain="1,1,0,0"/>
  <tile id="36" terrain="1,0,0,0"/>
+ <tile id="40" terrain="7,8,7,7"/>
+ <tile id="41" terrain="8,8,7,7"/>
+ <tile id="42" terrain="8,7,7,7"/>
  <tile id="43" terrain="4,5,4,4"/>
  <tile id="44" terrain="5,5,4,4"/>
  <tile id="45" terrain="5,4,4,4"/>
@@ -41,12 +54,20 @@
  <tile id="51" terrain="3,3,2,2"/>
  <tile id="52" terrain="3,3,2,3"/>
  <tile id="53" terrain="2,2,2,2"/>
+ <tile id="55" terrain="9,9,9,7"/>
+ <tile id="56" terrain="9,9,7,9"/>
+ <tile id="57" terrain="8,8,8,7"/>
+ <tile id="58" terrain="8,8,7,8"/>
  <tile id="62" terrain="5,4,5,5"/>
  <tile id="63" terrain="4,5,5,5"/>
  <tile id="64" terrain="2,2,2,3"/>
  <tile id="65" terrain="2,2,3,2"/>
  <tile id="66" terrain="3,2,3,2"/>
  <tile id="68" terrain="2,3,2,3"/>
+ <tile id="71" terrain="9,7,9,9"/>
+ <tile id="72" terrain="7,9,9,9"/>
+ <tile id="73" terrain="8,7,8,8"/>
+ <tile id="74" terrain="7,8,8,8"/>
  <tile id="75" terrain="4,4,4,6"/>
  <tile id="76" terrain="4,4,6,6"/>
  <tile id="77" terrain="4,4,6,4"/>
@@ -56,13 +77,22 @@
  <tile id="82" terrain="3,2,3,3"/>
  <tile id="83" terrain="2,2,3,3"/>
  <tile id="84" terrain="2,3,3,3"/>
+ <tile id="88" terrain="7,7,7,9"/>
+ <tile id="89" terrain="7,7,9,9"/>
+ <tile id="90" terrain="7,7,9,7"/>
  <tile id="91" terrain="4,6,4,6"/>
  <tile id="93" terrain="6,4,6,4"/>
+ <tile id="104" terrain="7,9,7,9"/>
+ <tile id="105" terrain="9,9,9,9"/>
+ <tile id="106" terrain="9,7,9,7"/>
  <tile id="107" terrain="4,6,4,4"/>
  <tile id="108" terrain="6,6,4,4"/>
  <tile id="109" terrain="6,4,4,4"/>
  <tile id="110" terrain="6,6,6,4"/>
  <tile id="111" terrain="6,6,4,6"/>
+ <tile id="120" terrain="7,9,7,7"/>
+ <tile id="121" terrain="9,9,7,7"/>
+ <tile id="122" terrain="9,7,7,7"/>
  <tile id="126" terrain="6,4,6,6"/>
  <tile id="127" terrain="4,6,6,6"/>
 </tileset>

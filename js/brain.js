@@ -101,6 +101,7 @@ function makeBrianGuard(cr) {
 				return cr.walkTowards(close[0], close[1]) * 0.6;
 			}
 
+			cr.noWalk();
 			cr.idle();
 			return 0.4;
 		},

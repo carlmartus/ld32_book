@@ -45,8 +45,8 @@ function frame(ft) {
 }
 
 function downloaded() {
-
 	gl.clearColor(0.0, 0.0, 0.0, 1.0);
+	//gl.clearColor(0.7, 0.7, 0.9, 1.0);
 
 	mapsGlobals();
 	plGlobals();

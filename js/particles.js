@@ -20,7 +20,6 @@ function paBloodHit(x, y, hp) {
 }
 
 function paSpawn(x, y) {
-	console.log(x, y);
 	paSpriteShower(x, y, 0.3, 10, [ TEX_PLASMA ]);
 }
 

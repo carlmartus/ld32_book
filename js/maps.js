@@ -29,7 +29,8 @@ function mapsPopulate(obj, cx, cy) {
 			break;
 
 		case 'munk' :
-			crSpawnMunk(cx, cy);
+			var info = obj.name == '' ? null : obj.name;
+			crSpawnMunk(cx, cy, info);
 			break;
 
 		case 'wolf' :
@@ -105,6 +106,7 @@ function mapsLoad(name) {
 	}
 
 	plHaltControl();
+	paSpawn(plX, plY);
 }
 
 function mapsProxTest() {

@@ -88,6 +88,6 @@
   <object type="wolf" x="291.667" y="36.6663" width="7" height="6"/>
   <object name="Welcome apprintice to the mythical library of the old druids. Some of them are willing to talk, others are a bit more busy." type="info" x="52.3333" y="13" width="18.6667" height="72.6667"/>
   <object name="Click the screen to capture the mouse. Use arrow keys to move." type="info" x="12.3333" y="13.3333" width="28.3333" height="74.3333"/>
-  <object type="munk" x="121.125" y="30.9167" width="3.625" height="3.75"/>
+  <object name="Hello" type="munk" x="121.125" y="30.9167" width="3.625" height="3.75"/>
  </objectgroup>
 </map>

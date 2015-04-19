@@ -27,6 +27,9 @@ function makeBrianSpeaker(cr) {
 			} else {
 				cr.noWalk();
 				cr.idle();
+				if (cr.info) {
+					paInfo(cr.x, cr.y);
+				}
 			}
 
 			return 0.500 + Math.random()*3.0;

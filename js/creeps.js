@@ -1,14 +1,18 @@
 var crList;
 
-function crSpawnMunk(x, y) {
-	crList.push(new Creep(TEAM_MONK, x, y, 0.4, 0.4, makeBrianSpeaker,
-				new Walker(3.0,
-					animation(getTexId(0, 8), 3),
-					animation(getTexId(0, 9), 3),
-					animation(getTexId(0, 10), 3),
-					animation(getTexId(0, 11), 3),
-					animation(getTexId(0, 12), 3),
-					animation(getTexId(0, 13), 3))));
+function crSpawnMunk(x, y, infoMsg) {
+	var cr = new Creep(TEAM_MONK, x, y, 0.4, 0.4, makeBrianSpeaker,
+			new Walker(3.0,
+				animation(getTexId(0, 8), 3),
+				animation(getTexId(0, 9), 3),
+				animation(getTexId(0, 10), 3),
+				animation(getTexId(0, 11), 3),
+				animation(getTexId(0, 12), 3),
+				animation(getTexId(0, 13), 3)));
+	if (infoMsg) {
+		cr.info = infoMsg;
+	}
+	crList.push(cr);
 }
 
 function crSpawnWolf(x, y) {

@@ -6,13 +6,6 @@ var spVbo;
 function spGlobals() {
 	spList = new Float32Array((spMax + 2)*spElems);
 	spCount = 0;
-	/*
-	spList[spCount++] = 2.0;
-	spList[spCount++] = 2.0;
-	spList[spCount++] = 0.2;
-	spList[spCount++] = 0.4;
-	spList[spCount++] = 0;
-	spList[spCount++] = 8;*/
 
 	spVbo = gl.createBuffer(gl.ARRAY_BUFFER);
 	gl.bindBuffer(gl.ARRAY_BUFFER, spVbo);
@@ -41,18 +34,6 @@ function spPush(x, y, z, texId, size) {
 	spList[spCount++] = size;
 	spList[spCount++] = u;
 	spList[spCount++] = v;
-
-	/*
-	spList[spCount++] = x;
-	spList[spCount++] = y;
-	spList[spCount++] = z;
-	spList[spCount++] = 1.0;
-
-	var u = (texId % tex0Dim) * tex0DimInv;
-	var v = Math.floor(texId / tex0Dim) * tex0DimInv;
-	spList[spCount++] = u;
-	spList[spCount++] = v;
-	spList*/
 }
 
 function spRender() {

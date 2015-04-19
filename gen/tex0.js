@@ -179,7 +179,7 @@
                 }, 
                 {
                  "height":3.75,
-                 "name":"",
+                 "name":"Hello",
                  "properties":
                     {
 

@@ -8,4 +8,5 @@ function getTexId(x, y) {
 }
 
 var TEX_MUNK = getTexId(0, 8);
+var TEX_INFO = getTexId(0, 15);
 

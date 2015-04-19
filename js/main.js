@@ -26,6 +26,8 @@ function frame(ft) {
 	crFrame(ft);
 	crRender();
 	plRender();
+	paFrameRender(ft);
+
 	spRender();
 
 	proxTest -= ft;
@@ -42,6 +44,7 @@ function downloaded() {
 	mapsGlobals();
 	plGlobals();
 	spGlobals();
+	paGlobals();
 
 	gl.bindTexture(gl.TEXTURE_2D, tex0);
 

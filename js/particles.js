@@ -1,3 +1,7 @@
+/**
+ * Particles and effects
+ */
+
 var paList;
 
 function paGlobals() {

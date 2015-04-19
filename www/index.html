@@ -27,6 +27,22 @@ body {
 	font-size: 18px;
 }
 
+#bookInfoImgSpeech {
+	margin: 12px;
+	width: 64px;
+	height: 64px;
+	background-image: url('infospeech.png');
+	float: left;
+}
+
+#bookInfoImgNotice {
+	margin: 12px;
+	width: 64px;
+	height: 64px;
+	background-image: url('infonotice.png');
+	float: left;
+}
+
 @font-face {
 	font-family: medi;
 	src: url('chantelli.ttf');
@@ -37,7 +53,11 @@ body {
 <body onload="main();">
 	<center>
 		<canvas id="bookCanvas" width="640" height="640"></canvas>
-		<div id="bookInfoBox"><p id="bookInfoText">&nbsp;</p></div>
+		<div id="bookInfoBox">
+			<div id="bookInfoImgNotice">&nbsp;</div>
+			<div id="bookInfoImgSpeech">&nbsp;</div>
+			<div id="bookInfoText">&nbsp;</div>
+		</div>
 	</center>
 
 	<script src="bundle.min.js"></script>

@@ -1,3 +1,7 @@
+/**
+ * Program entry point
+ */
+
 var gl;
 var screenW = 640, screenH = 640;
 var blockRender = false;

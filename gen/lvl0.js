@@ -20,13 +20,27 @@
         }, 
         {
          "draworder":"topdown",
-         "height":20,
+         "height":0,
          "name":"Object Layer 1",
-         "objects":[],
+         "objects":[
+                {
+                 "height":7.31921951078078,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":-1.27970954596105,
+                 "type":"start",
+                 "visible":true,
+                 "width":13.8253147900294,
+                 "x":31.7462936994919,
+                 "y":83.2569767432784
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
-         "width":20,
+         "width":0,
          "x":0,
          "y":0
         }],

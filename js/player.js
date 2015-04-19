@@ -16,11 +16,11 @@ function plGlobals() {
 			animation(getTexId(0, 13), 3));
 }
 
-function plSpawn(x, y) {
+function plSpawn(x, y, rot) {
 	plX = x;
 	plY = y;
 	plZ = 0.4;
-	plRx = 0.0;
+	inputMouseX = rot;
 }
 
 function plUpdateCage() {
@@ -32,7 +32,7 @@ function plUpdateCage() {
 
 function plFrame(ft) {
 	// View angle
-	plRx = inputMouseX * 0.02;
+	plRx = inputMouseX;
 	plUpdateCage();
 
 	// Position
@@ -61,6 +61,7 @@ function plFrame(ft) {
 
 		plWalker.frame(ft, plX, plY,
 				Math.atan2(-dirY, -dirX));
+		plWalker.refreshDirection();
 	} else {
 		plWalker.setState(W_IDLE);
 		plWalker.frame(ft, plX, plY, plRx + Math.PI);
@@ -79,5 +80,13 @@ function plFrame(ft) {
 
 function plRender() {
 	plWalker.render(0.4);
+}
+
+function plHaltControl() {
+	inputState.up = false;
+	inputState.down = false;
+	inputState.right = false;
+	inputState.left = false;
+	inputState.click = false;
 }
 

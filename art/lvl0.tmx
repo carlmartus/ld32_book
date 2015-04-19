@@ -3,8 +3,10 @@
  <tileset firstgid="1" source="tex0.tsx"/>
  <layer name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJwTYGBgEBiCmB2KqWkerdyIjsn1HyXmUdt9A2XeQKe7UTyKRzECAwAhWxfP
+   eJxjYBgFo2AUjIJRMApIBwAGQAAB
   </data>
  </layer>
- <objectgroup name="Object Layer 1"/>
+ <objectgroup name="Object Layer 1">
+  <object type="start" x="31.7463" y="83.257" width="13.8253" height="7.31922" rotation="-1.27971"/>
+ </objectgroup>
 </map>

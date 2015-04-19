@@ -121,8 +121,8 @@ function listenMouse() {
 			event.webkitMovementY ||
 			0;
 
-		inputMouseX += movementX * 0.5;
-		inputMouseY += movementY * 0.5;
+		inputMouseX += movementX * 0.01;
+		inputMouseY += movementY * 0.01;
 	}, false);
 	document.addEventListener('mousedown', function(event) {
 		if (inputMouseLock) {

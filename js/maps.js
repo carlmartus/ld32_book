@@ -9,18 +9,23 @@ var mapShaderUnMvp = null;
 
 var mapWallTiles = {
 	1: true,
-	2: true
+	2: true,
+	5: true,
+	6: true
 };
 
 var mapWalls = {
 	5: 2.0,
-	53: 2.0
+	53: 2.0,
+	14: 2.0,
+	78: 2.0
 };
 
 function mapsPopulate(obj, cx, cy) {
 	switch (obj.type) {
 		case 'start' :
-			plSpawn(cx, cy);
+			var rot = obj.rotation * Math.PI / 180.0;
+			plSpawn(cx, cy, rot);
 			break;
 
 		case 'munk' :
@@ -88,6 +93,8 @@ function mapsLoad(name) {
 
 		mapsPopulate(o, cx, cy);
 	}
+
+	plHaltControl();
 }
 
 function mapsProxTest() {

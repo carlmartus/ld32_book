@@ -7,7 +7,18 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object type="start" x="11.4545" y="45.0909" width="6.54545" height="4.54545"/>
-  <object name="Fine job brother. The brotherhood have ringed in a new era of reasoning. The game is over." type="munk" x="56.5455" y="47.0909" width="5.45455" height="4.18182"/>
+  <object type="start" x="7.4545" y="45.0909" width="6.54545" height="4.54545"/>
+  <object name="Fine job brother. The brotherhood have ringed in a new era of reasoning. The game is over." type="munk" x="50" y="46.7273" width="5.45455" height="4.18182"/>
+  <object type="munk" x="64.9091" y="46.7273" width="4.90909" height="4.18182"/>
+  <object type="munk" x="65.2727" y="54.9091" width="4.90909" height="4.18182"/>
+  <object type="munk" x="59.6364" y="32.1818" width="4.90909" height="4.18182"/>
+  <object type="munk" x="61.0909" y="60.7273" width="4.90909" height="4.18182"/>
+  <object type="munk" x="59.0909" y="53.8182" width="4.90909" height="4.18182"/>
+  <object type="munk" x="59.2727" y="44.7273" width="4.90909" height="4.18182"/>
+  <object type="munk" x="67.0909" y="37.4545" width="4.90909" height="4.18182"/>
+  <object type="munk" x="69.4545" y="48.5455" width="4.90909" height="4.18182"/>
+  <object type="munk" x="61.8182" y="38.5455" width="4.90909" height="4.18182"/>
+  <object type="munk" x="70" y="42.7273" width="4.90909" height="4.18182"/>
+  <object type="munk" x="66.7273" y="60.1818" width="4.90909" height="4.18182"/>
  </objectgroup>
 </map>

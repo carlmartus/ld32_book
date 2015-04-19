@@ -20,11 +20,11 @@
         }, 
         {
          "draworder":"topdown",
-         "height":6,
+         "height":0,
          "name":"Object Layer 1",
          "objects":[
                 {
-                 "height":4.54545454545455,
+                 "height":4.54545,
                  "name":"",
                  "properties":
                     {
@@ -33,12 +33,12 @@
                  "rotation":0,
                  "type":"start",
                  "visible":true,
-                 "width":6.54545454545454,
-                 "x":11.4545454545455,
-                 "y":45.0909090909091
+                 "width":6.54545,
+                 "x":7.4545,
+                 "y":45.0909
                 }, 
                 {
-                 "height":4.18181818181818,
+                 "height":4.18182,
                  "name":"Fine job brother. The brotherhood have ringed in a new era of reasoning. The game is over.",
                  "properties":
                     {
@@ -47,14 +47,168 @@
                  "rotation":0,
                  "type":"munk",
                  "visible":true,
-                 "width":5.45454545454545,
-                 "x":56.5454545454545,
-                 "y":47.0909090909091
+                 "width":5.45455,
+                 "x":50.0000454545455,
+                 "y":46.7272636363636
+                }, 
+                {
+                 "height":4.18181818181819,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"munk",
+                 "visible":true,
+                 "width":4.90909090909092,
+                 "x":64.9090909090909,
+                 "y":46.7272727272727
+                }, 
+                {
+                 "height":4.18181818181819,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"munk",
+                 "visible":true,
+                 "width":4.90909090909092,
+                 "x":65.2727272727273,
+                 "y":54.9090909090909
+                }, 
+                {
+                 "height":4.18181818181819,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"munk",
+                 "visible":true,
+                 "width":4.90909090909092,
+                 "x":59.6363636363636,
+                 "y":32.1818181818182
+                }, 
+                {
+                 "height":4.18181818181819,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"munk",
+                 "visible":true,
+                 "width":4.90909090909092,
+                 "x":61.0909090909091,
+                 "y":60.7272727272727
+                }, 
+                {
+                 "height":4.18181818181819,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"munk",
+                 "visible":true,
+                 "width":4.90909090909092,
+                 "x":59.0909090909091,
+                 "y":53.8181818181818
+                }, 
+                {
+                 "height":4.18181818181819,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"munk",
+                 "visible":true,
+                 "width":4.90909090909092,
+                 "x":59.2727272727273,
+                 "y":44.7272727272727
+                }, 
+                {
+                 "height":4.18181818181819,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"munk",
+                 "visible":true,
+                 "width":4.90909090909092,
+                 "x":67.0909090909091,
+                 "y":37.4545454545455
+                }, 
+                {
+                 "height":4.18181818181819,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"munk",
+                 "visible":true,
+                 "width":4.90909090909092,
+                 "x":69.4545454545454,
+                 "y":48.5454545454546
+                }, 
+                {
+                 "height":4.18181818181819,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"munk",
+                 "visible":true,
+                 "width":4.90909090909092,
+                 "x":61.8181818181818,
+                 "y":38.5454545454545
+                }, 
+                {
+                 "height":4.18181818181819,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"munk",
+                 "visible":true,
+                 "width":4.90909090909092,
+                 "x":70,
+                 "y":42.7272727272727
+                }, 
+                {
+                 "height":4.18181818181819,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"munk",
+                 "visible":true,
+                 "width":4.90909090909092,
+                 "x":66.7272727272727,
+                 "y":60.1818181818182
                 }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
-         "width":6,
+         "width":0,
          "x":0,
          "y":0
         }],

@@ -4,6 +4,9 @@ var plLookX, plLookY;
 var plSideX, plSideY;
 var plWalker;
 
+var plDisabled = 0.0;
+var plDisabledDX, plDisabledDY;
+
 var plSpeed = 2.0, plSize = 0.2;
 
 function plGlobals() {
@@ -40,35 +43,47 @@ function plFrame(ft) {
 	plUpdateCage();
 
 	// Position
-	var movX=0.0, movY=0.0;
+	if (plDisabled > 0) {
+		plDisabled -= ft;
 
-	if (inputState.up)		movX += 1.0;
-	if (inputState.down)	movX -= 1.0;
-	if (inputState.left)	movY += 1.0;
-	if (inputState.right)	movY -= 1.0;
-
-	if (movX != 0.0 || movY != 0.0) {
-		var invLen = 1.0 / Math.sqrt(movX*movX + movY*movY);
-		movX *= invLen*plSpeed;
-		movY *= invLen*plSpeed;
-
-		var dirX = plLookX*movX + plSideX*movY;
-		var dirY = plSideX*movX + plSideY*movY;
-		dirX *= ft;
-		dirY *= ft;
-
-		var aff = mapsWalk(plX, plY, dirX, dirY, plSize);
+		var aff = mapsWalk(plX, plY, plDisabledDX, plDisabledDY, plSize);
 		plX = aff[0];
 		plY = aff[1];
 
-		plWalker.setState(W_WALK);
-
+		plWalker.setState(W_IDLE);
 		plWalker.frame(ft, plX, plY,
 				Math.atan2(-dirY, -dirX));
-		plWalker.refreshDirection();
 	} else {
-		plWalker.setState(W_IDLE);
-		plWalker.frame(ft, plX, plY, plRx + Math.PI);
+		var movX=0.0, movY=0.0;
+
+		if (inputState.up)		movX += 1.0;
+		if (inputState.down)	movX -= 1.0;
+		if (inputState.left)	movY += 1.0;
+		if (inputState.right)	movY -= 1.0;
+
+		if (movX != 0.0 || movY != 0.0) {
+			var invLen = 1.0 / Math.sqrt(movX*movX + movY*movY);
+			movX *= invLen*plSpeed;
+			movY *= invLen*plSpeed;
+
+			var dirX = plLookX*movX + plSideX*movY;
+			var dirY = plSideX*movX + plSideY*movY;
+			dirX *= ft;
+			dirY *= ft;
+
+			var aff = mapsWalk(plX, plY, dirX, dirY, plSize);
+			plX = aff[0];
+			plY = aff[1];
+
+			plWalker.setState(W_WALK);
+
+			plWalker.frame(ft, plX, plY,
+					Math.atan2(-dirY, -dirX));
+			plWalker.refreshDirection();
+		} else {
+			plWalker.setState(W_IDLE);
+			plWalker.frame(ft, plX, plY, plRx + Math.PI);
+		}
 	}
 
 	plCamX = plX - plLookX * 1.0;
@@ -92,6 +107,17 @@ function plHaltControl() {
 	inputState.right = false;
 	inputState.left = false;
 	inputState.click = false;
+}
+
+function plHit(x, y, hp) {
+	plDisabled = hp*0.005;
+
+	var dX = plX - x;
+	var dY = plY - y;
+	var lenInv = 1.0 / Math.sqrt(dX*dX + dY*dY);
+
+	plDisabledDX = dX * lenInv * hp*0.001;
+	plDisabledDY = dY * lenInv * hp*0.001;
 }
 
 function plDistance(x, y) {

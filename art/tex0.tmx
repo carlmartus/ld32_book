@@ -73,12 +73,11 @@
   </data>
  </layer>
  <objectgroup name="lvl0">
-  <object type="start" x="43.3329" y="64.7493" width="10" height="8.5" rotation="-81.6243">
+  <object type="start" x="25.1209" y="47.8866" width="10" height="8.5" rotation="-386.637">
    <properties>
     <property name="rot" value="1"/>
    </properties>
   </object>
-  <object type="munk" x="119.125" y="28.25" width="3.625" height="3.75"/>
   <object type="munk" x="209.875" y="62" width="3.625" height="3.75"/>
   <object type="munk" x="210" y="37.5" width="3.625" height="3.75"/>
   <object type="munk" x="187.75" y="186" width="3.625" height="3.75"/>
@@ -87,5 +86,8 @@
   <object type="munk" x="223.875" y="180.5" width="3.625" height="3.75"/>
   <object type="munk" x="222.75" y="201.375" width="3.625" height="3.75"/>
   <object type="wolf" x="291.667" y="36.6663" width="7" height="6"/>
+  <object name="Welcome apprintice to the mythical library of the old druids. Some of them are willing to talk, others are a bit more busy." type="info" x="52.3333" y="13" width="18.6667" height="72.6667"/>
+  <object name="Click the screen to capture the mouse. Use arrow keys to move." type="info" x="12.3333" y="13.3333" width="28.3333" height="74.3333"/>
+  <object type="munk" x="121.125" y="30.9167" width="3.625" height="3.75"/>
  </objectgroup>
 </map>

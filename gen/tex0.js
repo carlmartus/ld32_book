@@ -30,26 +30,12 @@
                     {
                      "rot":"1"
                     },
-                 "rotation":-81.6243,
+                 "rotation":-386.63708260828,
                  "type":"start",
                  "visible":true,
                  "width":10,
-                 "x":43.3329,
-                 "y":64.7493333333333
-                }, 
-                {
-                 "height":3.75,
-                 "name":"",
-                 "properties":
-                    {
-
-                    },
-                 "rotation":0,
-                 "type":"munk",
-                 "visible":true,
-                 "width":3.625,
-                 "x":119.125,
-                 "y":28.25
+                 "x":25.1208622750659,
+                 "y":47.8865654483063
                 }, 
                 {
                  "height":3.75,
@@ -162,6 +148,48 @@
                  "width":6.99999666666666,
                  "x":291.666633333333,
                  "y":36.6663333333334
+                }, 
+                {
+                 "height":72.6666666666667,
+                 "name":"Welcome apprintice to the mythical library of the old druids. Some of them are willing to talk, others are a bit more busy.",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"info",
+                 "visible":true,
+                 "width":18.6666666666666,
+                 "x":52.3333333333333,
+                 "y":13
+                }, 
+                {
+                 "height":74.3333333333333,
+                 "name":"Click the screen to capture the mouse. Use arrow keys to move.",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"info",
+                 "visible":true,
+                 "width":28.3333333333333,
+                 "x":12.3333333333333,
+                 "y":13.3333333333333
+                }, 
+                {
+                 "height":3.75,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"munk",
+                 "visible":true,
+                 "width":3.625,
+                 "x":121.125,
+                 "y":30.9166666666667
                 }],
          "opacity":1,
          "type":"objectgroup",

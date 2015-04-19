@@ -12,6 +12,8 @@ function makeBrianSpeaker(cr) {
 		update: function() {
 			if (plDistance(cr.x, cr.y) < 1.0) {
 				cr.faceTowards(plX, plY);
+				cr.noWalk();
+				cr.idle();
 				return 1;
 			}
 
@@ -37,19 +39,29 @@ function makeBrianSpeaker(cr) {
  */
 function makeBrianGuard(cr) {
 	return {
+		swing: false,
 		init: function() {
 			return Math.random();
 		},
 		update: function() {
 			if (cr.getState() == W_DEAD) return 2;
 
+			if (this.swing) {
+				coInflict(TEAM_NATURE, cr.x, cr.y, 0.3, 40);
+				this.swing = false;
+				cr.noWalk();
+				return 0.5;
+			}
+
 			var distToPlayer = plDistance(cr.x, cr.y);
-			if (distToPlayer < 0.2) {
+			if (distToPlayer < 0.21) {
 				cr.noWalk();
 				cr.attack();
-				return 0.5;
+				this.swing = true;
+				cr.setSpeedMul(12.0);
+				return 0.1;
 			} else if (distToPlayer < 5) {
-				cr.setSpeedMul(4.0);
+				cr.setSpeedMul(6.0);
 				return cr.walkTowards(plX, plY) * 0.5;
 			} else {
 				cr.idle();

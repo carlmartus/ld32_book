@@ -1,7 +1,7 @@
 var crList;
 
 function crSpawnMunk(x, y) {
-	crList.push(new Creep(x, y, 0.4, 0.4, makeBrianSpeaker,
+	crList.push(new Creep(TEAM_MONK, x, y, 0.4, 0.4, makeBrianSpeaker,
 				new Walker(3.0,
 					animation(getTexId(0, 8), 3),
 					animation(getTexId(0, 9), 3),
@@ -12,8 +12,8 @@ function crSpawnMunk(x, y) {
 }
 
 function crSpawnWolf(x, y) {
-	crList.push(new Creep(x, y, 0.4, 0.4, makeBrianGuard,
-				new Walker(3.0,
+	crList.push(new Creep(TEAM_NATURE, x, y, 0.4, 0.4, makeBrianGuard,
+				new Walker(1.0,
 					animation(getTexId(3, 8), 3),
 					animation(getTexId(3, 9), 3),
 					animation(getTexId(3, 10), 3),
@@ -34,7 +34,8 @@ function crFrame(ft) {
 	for (var i=0; i<crList.length; i++) crList[i].frame(ft);
 }
 
-function Creep(x, y, size, speed, brainMaker, walker) {
+function Creep(team, x, y, size, speed, brainMaker, walker) {
+	this.team = team;
 	this.x = x;
 	this.y = y;
 	this.dX = this.dY = 0.0;
@@ -81,8 +82,8 @@ Creep.prototype.walkTowards = function(x, y) {
 };
 
 Creep.prototype.setSpeedMul = function(mul) {
-	this.walker.setState(mul);
 	this.speedMul = mul;
+	this.walker.setSpeed(mul);
 };
 
 Creep.prototype.noWalk = function() {

@@ -34,8 +34,8 @@
                  "type":"start",
                  "visible":true,
                  "width":10,
-                 "x":272.787528941733,
-                 "y":48.553232114973
+                 "x":26.120862275066,
+                 "y":44.2198987816397
                 }, 
                 {
                  "height":3.75,
@@ -179,7 +179,7 @@
                 }, 
                 {
                  "height":3.75,
-                 "name":"Hello",
+                 "name":"Hello fellow monk. Looks like you need to freshen up your spell casting. Ask your brothers in the library.",
                  "properties":
                     {
 

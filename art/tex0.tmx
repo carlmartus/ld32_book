@@ -1,79 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="16" tileheight="16">
- <tileset firstgid="1" name="tex0" tilewidth="16" tileheight="16">
-  <image source="../www/tex0.png" width="256" height="256"/>
-  <terraintypes>
-   <terrain name="libFloor0" tile="0"/>
-   <terrain name="libWall0" tile="5"/>
-   <terrain name="libwall1" tile="53"/>
-   <terrain name="libFloor1" tile="48"/>
-   <terrain name="snow" tile="15"/>
-   <terrain name="snowWall" tile="14"/>
-   <terrain name="snowBush" tile="78"/>
-  </terraintypes>
-  <tile id="0" terrain="0,0,0,0"/>
-  <tile id="2" terrain="0,0,0,1"/>
-  <tile id="3" terrain="0,0,1,1"/>
-  <tile id="4" terrain="0,0,1,0"/>
-  <tile id="5" terrain="1,1,1,1"/>
-  <tile id="11" terrain="4,4,4,5"/>
-  <tile id="12" terrain="4,4,5,5"/>
-  <tile id="13" terrain="4,4,5,4"/>
-  <tile id="14" terrain="5,5,5,5"/>
-  <tile id="15" terrain="4,4,4,4"/>
-  <tile id="16" terrain="1,1,1,0"/>
-  <tile id="17" terrain="1,1,0,1"/>
-  <tile id="18" terrain="0,1,0,1"/>
-  <tile id="20" terrain="1,0,1,0"/>
-  <tile id="27" terrain="4,5,4,5"/>
-  <tile id="29" terrain="5,4,5,4"/>
-  <tile id="32" terrain="1,0,1,1"/>
-  <tile id="33" terrain="0,1,1,1"/>
-  <tile id="34" terrain="0,1,0,0"/>
-  <tile id="35" terrain="1,1,0,0"/>
-  <tile id="36" terrain="1,0,0,0"/>
-  <tile id="43" terrain="4,5,4,4"/>
-  <tile id="44" terrain="5,5,4,4"/>
-  <tile id="45" terrain="5,4,4,4"/>
-  <tile id="46" terrain="5,5,5,4"/>
-  <tile id="47" terrain="5,5,4,5"/>
-  <tile id="48" terrain="3,3,3,3"/>
-  <tile id="50" terrain="3,3,3,2"/>
-  <tile id="51" terrain="3,3,2,2"/>
-  <tile id="52" terrain="3,3,2,3"/>
-  <tile id="53" terrain="2,2,2,2"/>
-  <tile id="62" terrain="5,4,5,5"/>
-  <tile id="63" terrain="4,5,5,5"/>
-  <tile id="64" terrain="2,2,2,3"/>
-  <tile id="65" terrain="2,2,3,2"/>
-  <tile id="66" terrain="3,2,3,2"/>
-  <tile id="68" terrain="2,3,2,3"/>
-  <tile id="75" terrain="4,4,4,6"/>
-  <tile id="76" terrain="4,4,6,6"/>
-  <tile id="77" terrain="4,4,6,4"/>
-  <tile id="78" terrain="6,6,6,6"/>
-  <tile id="80" terrain="2,3,2,2"/>
-  <tile id="81" terrain="3,2,2,2"/>
-  <tile id="82" terrain="3,2,3,3"/>
-  <tile id="83" terrain="2,2,3,3"/>
-  <tile id="84" terrain="2,3,3,3"/>
-  <tile id="91" terrain="4,6,4,6"/>
-  <tile id="93" terrain="6,4,6,4"/>
-  <tile id="107" terrain="4,6,4,4"/>
-  <tile id="108" terrain="6,6,4,4"/>
-  <tile id="109" terrain="6,4,4,4"/>
-  <tile id="110" terrain="6,6,6,4"/>
-  <tile id="111" terrain="6,6,4,6"/>
-  <tile id="126" terrain="6,4,6,6"/>
-  <tile id="127" terrain="4,6,6,6"/>
- </tileset>
+ <tileset firstgid="1" source="tex0.tsx"/>
  <layer name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
    eJzl0rkKwkAQBuANamziTToRvDoPRE3tgZ0IXp2PoL6Cr+4fmMDwszExBCwsPphssn9mNnGNMW7OGjDIQVPyfHCgAEWLkrrHtSPK0FJ5+pr59KyudQ89We/StS2vLzMNqY7r4ZPofbb543r4hp6Zpf1mafPqCWz7kvI8qJCqygvIDraW9UD2tKFGOpS3hou4wlnqTYq8KUwoL+xpZsF9hntGMFaiLJ13hIVYwlzqE+Xt4aD2e+rsspzfDV6SGWat1Nll+b53eMBTzc3z/vr/+6e8N/ecIrw=
   </data>
  </layer>
  <objectgroup name="lvl0">
-  <object type="start" x="272.788" y="48.5532" width="10" height="8.5" rotation="-386.637">
+  <object type="start" x="26.1209" y="44.2199" width="10" height="8.5" rotation="-386.637">
    <properties>
     <property name="rot" value="1"/>
    </properties>
@@ -88,6 +22,6 @@
   <object type="wolf" x="291.667" y="36.6663" width="7" height="6"/>
   <object name="Welcome apprintice to the mythical library of the old druids. Some of them are willing to talk, others are a bit more busy." type="info" x="52.3333" y="13" width="18.6667" height="72.6667"/>
   <object name="Click the screen to capture the mouse. Use arrow keys to move." type="info" x="12.3333" y="13.3333" width="28.3333" height="74.3333"/>
-  <object name="Hello" type="munk" x="121.125" y="30.9167" width="3.625" height="3.75"/>
+  <object name="Hello fellow monk. Looks like you need to freshen up your spell casting. Ask your brothers in the library." type="munk" x="121.125" y="30.9167" width="3.625" height="3.75"/>
  </objectgroup>
 </map>

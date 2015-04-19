@@ -8,6 +8,7 @@
   <terrain name="libFloor1" tile="48"/>
   <terrain name="snow" tile="15"/>
   <terrain name="snowWall" tile="14"/>
+  <terrain name="snowBush" tile="78"/>
  </terraintypes>
  <tile id="0" terrain="0,0,0,0"/>
  <tile id="2" terrain="0,0,0,1"/>
@@ -46,9 +47,22 @@
  <tile id="65" terrain="2,2,3,2"/>
  <tile id="66" terrain="3,2,3,2"/>
  <tile id="68" terrain="2,3,2,3"/>
+ <tile id="75" terrain="4,4,4,6"/>
+ <tile id="76" terrain="4,4,6,6"/>
+ <tile id="77" terrain="4,4,6,4"/>
+ <tile id="78" terrain="6,6,6,6"/>
  <tile id="80" terrain="2,3,2,2"/>
  <tile id="81" terrain="3,2,2,2"/>
  <tile id="82" terrain="3,2,3,3"/>
  <tile id="83" terrain="2,2,3,3"/>
  <tile id="84" terrain="2,3,3,3"/>
+ <tile id="91" terrain="4,6,4,6"/>
+ <tile id="93" terrain="6,4,6,4"/>
+ <tile id="107" terrain="4,6,4,4"/>
+ <tile id="108" terrain="6,6,4,4"/>
+ <tile id="109" terrain="6,4,4,4"/>
+ <tile id="110" terrain="6,6,6,4"/>
+ <tile id="111" terrain="6,6,4,6"/>
+ <tile id="126" terrain="6,4,6,6"/>
+ <tile id="127" terrain="4,6,6,6"/>
 </tileset>

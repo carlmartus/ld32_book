@@ -39,7 +39,7 @@ function mapsPopulate(obj, cx, cy) {
 
 		case 'info' :
 			mapProxies.push(new Proxy(obj, function(obj) {
-				infoSetText(obj.name);
+				infoInfo(obj.name);
 			}));
 			break;
 

@@ -14,7 +14,7 @@ function makeBrianSpeaker(cr) {
 				cr.faceTowards(plX, plY);
 				cr.noWalk();
 				cr.idle();
-				if (cr.info) infoSetText(cr.info);
+				if (cr.info) infoSpeech(cr.info);
 				return 1;
 			}
 
@@ -54,7 +54,7 @@ function makeBrianGuard(cr) {
 				coInflict(TEAM_NATURE, cr.x, cr.y, 0.3, 40);
 				this.swing = false;
 				cr.noWalk();
-				return 0.5;
+				return 0.4 + Math.random()*0.3;
 			}
 
 			var distToPlayer = plDistance(cr.x, cr.y);

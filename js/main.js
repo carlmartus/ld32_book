@@ -21,6 +21,8 @@ function frame(ft) {
 
 	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
+	infoClearCounter(ft);
+
 	plFrame(ft);
 	mapsRender();
 	crFrame(ft);
@@ -48,7 +50,7 @@ function downloaded() {
 
 	gl.bindTexture(gl.TEXTURE_2D, tex0);
 
-	mapsLoad('tex0');
+	mapsLoad('lvl0');
 
 	esNextFrame(frame);
 }

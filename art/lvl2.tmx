@@ -3,7 +3,7 @@
  <tileset firstgid="1" source="tex0.tsx"/>
  <layer name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJytk9sNwjAMRfNJ2wVadQLKAjwWgDJBYQOYgLI8N1KuZFmJSaJ+HCkO9SFpr3vnXA/OYAKXRE1GsDNg7yHU++DR9aT2LR//cwEP8BRr1pZDwrP5/ht4gatYs851jsrlOYIVnMTeu8D3Ef3e9Q2/cX8Ve/+YQSf6ZV8D2kCX6bMyMLj8nFg+nute6eOdY54aH58fIp4aHzOofZy5nLnQedbvX76H3Nlg/rj2s1o6/5Yv5iz16Ts1ri4nqbzorNT4UnmR32oLX+nZpG/e4K6eHzL3JvU=
+   eJzVk9ENgjAQhvtYcAEMEygLqCyAOIEygToBsLzXpJf8+dOW49GHL2kL93F3PRrnXCPchLPQZ/Z7CLGd4IVT9PAe2fpGG2OfwkuYYK17DxwNuYX4u/ARBljrHp2cM+bbkitwERbhCmdfytGTvwffDPHBtcb39HyJZ5VQRw7gC+eP6Bvh2QwuT/E1xGDPU/3EZ7m+6/wo3Q6f5pXLp9Q/rDnlsczUlMmxNFfqe8N941pnCGew5NMa9M5XWmvt+K+VfDwLqX7X1Gfua65u6xxZnFt95hoql75fq4/npeSy+v7hvdFQq8X3A2DqOAk=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -26,5 +26,45 @@
   <object type="spider" x="54" y="47.5" width="17" height="13"/>
   <object type="spider" x="54" y="47.5" width="17" height="13"/>
   <object type="spider" x="54" y="47.5" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="spider" x="256" y="159.167" width="17" height="13"/>
+  <object type="wolf" x="209.667" y="168.333" width="14" height="9.66667"/>
+  <object type="wolf" x="203.333" y="163" width="14" height="9.66667"/>
+  <object type="wolf" x="204.333" y="173.667" width="14" height="9.66667"/>
+  <object type="wolf" x="216" y="155.333" width="14" height="9.66667"/>
+  <object type="wolf" x="207.333" y="152.333" width="14" height="9.66667"/>
+  <object type="wolf" x="210.667" y="159.333" width="14" height="9.66667"/>
+  <object type="wolf" x="210.667" y="159.333" width="14" height="9.66667"/>
+  <object type="wolf" x="201" y="157.333" width="14" height="9.66667"/>
  </objectgroup>
 </map>

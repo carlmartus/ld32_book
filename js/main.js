@@ -167,9 +167,13 @@ function lockMouse() {
 
 function keyListener(event, down) {
 	switch (event.keyCode) {
+		case 65 :
 		case 37 :	inputState.left = down; break;
+		case 87 :
 		case 38 :	inputState.up = down; break;
+		case 68 :
 		case 39 :	inputState.right = down; break;
+		case 83 :
 		case 40 :	inputState.down = down; break;
 		case 77 : if (down) {
 			lockMouse();

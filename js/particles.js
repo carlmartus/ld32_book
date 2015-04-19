@@ -5,6 +5,19 @@ function paGlobals() {
 }
 
 function paBloodHit(x, y, hp) {
+	var amount = Math.round(hp / 10);
+	var sprites = [ TEX_BLOOD0, TEX_BLOOD1 ];
+
+	for (var i=0; i<amount; i++) {
+		var rX = 3.0*Math.random() - 1.5;
+		var rY = 3.0*Math.random() - 1.5;
+
+		paList.push(new Particle(
+					sprites[i % sprites.length],
+					2.0, x, y, 0.4,
+					rX, rY, 0.15,
+					0.25, 4.0));
+	}
 }
 
 function paSpawn(x, y) {
@@ -46,7 +59,7 @@ Particle.prototype.frame = function(ft) {
 	this.ttl -= ft;
 
 	if (this.gravity) {
-		this.dz -= this.gravity*ft;
+		this.dZ -= this.gravity*ft;
 	}
 
 	this.x += this.dX*ft;

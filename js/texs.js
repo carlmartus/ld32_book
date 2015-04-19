@@ -9,4 +9,6 @@ function getTexId(x, y) {
 
 var TEX_MUNK = getTexId(0, 8);
 var TEX_INFO = getTexId(0, 15);
+var TEX_BLOOD0 = getTexId(1, 15);
+var TEX_BLOOD1 = getTexId(2, 15);
 

@@ -118,6 +118,8 @@ function plHit(x, y, hp) {
 
 	plDisabledDX = dX * lenInv * hp*0.001;
 	plDisabledDY = dY * lenInv * hp*0.001;
+
+	paBloodHit(plX, plY, hp);
 }
 
 function plDistance(x, y) {

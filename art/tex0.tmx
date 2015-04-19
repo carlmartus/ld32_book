@@ -73,7 +73,7 @@
   </data>
  </layer>
  <objectgroup name="lvl0">
-  <object type="start" x="25.1209" y="47.8866" width="10" height="8.5" rotation="-386.637">
+  <object type="start" x="272.788" y="48.5532" width="10" height="8.5" rotation="-386.637">
    <properties>
     <property name="rot" value="1"/>
    </properties>

@@ -10,10 +10,11 @@ function makeBrianSpeaker(cr) {
 			return this.update();
 		},
 		update: function() {
-			if (plDistance(cr.x, cr.y) < 1.0) {
+			if (plDistance(cr.x, cr.y) < 0.4) {
 				cr.faceTowards(plX, plY);
 				cr.noWalk();
 				cr.idle();
+				if (cr.info) infoSetText(cr.info);
 				return 1;
 			}
 

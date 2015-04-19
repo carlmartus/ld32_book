@@ -15,7 +15,7 @@ function paInfo(x, y) {
 				TEX_INFO,
 				2.0, x, y, 0.4,
 				0.0, 0.0, 0.15,
-				0.1, 0.0));
+				0.15, 0.0));
 }
 
 function paFrameRender(ft) {

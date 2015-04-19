@@ -110,7 +110,7 @@ function plFrame(ft) {
 	plCamZ = 0.8;
 
 	// Update camera
-	esMat4_camera(mvp, 1.0, 1.23, 0.01, 40.0,
+	esMat4_camera(mvp, 1.0, 1.0, 0.01, 40.0,
 			esVec3_parse(plCamX, plCamY, plCamZ),
 			esVec3_parse(plX, plY, plZ),
 			esVec3_parse(0.0, 0.0, 1.0));

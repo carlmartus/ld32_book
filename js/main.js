@@ -7,6 +7,7 @@ var proxTest = 0.0;
 
 var inputMouseX = 0;
 var inputMouseY = 0;
+var inputMouseLock = false;
 var inputState = {
 	click: false,
 	up: false,
@@ -49,15 +50,6 @@ function downloaded() {
 	esNextFrame(frame);
 }
 
-function keyListener(event, down) {
-	switch (event.keyCode) {
-		case 37 :	inputState.left = down; break;
-		case 38 :	inputState.up = down; break;
-		case 39 :	inputState.right = down; break;
-		case 40 :	inputState.down = down; break;
-	}
-}
-
 function main() {
 	gl = esInitGl('bookCanvas', { antialias: false });
 	gl.enable(gl.DEPTH_TEST);
@@ -72,18 +64,8 @@ function main() {
 		keyListener(event, false);
 	});
 
-	var can = document.getElementById('bookCanvas');
-	can.addEventListener('mousemove', function(event) {
-		inputMouseX = event.clientX - can.offsetLeft;
-		inputMouseY = event.clientY - can.offsetTop;
-	}, false);
-	can.addEventListener('mousedown', function(event) {
-		inputState.click = true;
-	}, false);
-	can.addEventListener('mouseup', function(event) {
-		inputState.click = false;
-	}, false);
-
+	listenMouse();
+	lockMouse();
 
 	mvp = esMat4_create();
 	/*
@@ -102,5 +84,85 @@ function main() {
 	var lod = new esLoad();
 	tex0 = lod.loadTexture(gl, 'tex0.png', gl.NEAREST, gl.LINEAR);
 	lod.downloadWithGlScreen(gl, downloaded);
+}
+
+function getCanvasElement() {
+	return document.getElementById('bookCanvas');
+}
+
+function mouseLockChange(event) {
+	var can = getCanvasElement();
+	if (
+			document.pointerLockElement === can ||
+			document.mozPointerLockElement === can ||
+			document.webkitPointerLockElement === can) {
+		inputMouseLock = true;
+	} else {
+		inputMouseLock = false;
+	}
+}
+
+function listenMouse() {
+	document.addEventListener('pointerlockchange', mouseLockChange, false);
+	document.addEventListener('mozpointerlockchange', mouseLockChange, false);
+	document.addEventListener('webkitpointerlockchange', mouseLockChange, false);
+
+	document.addEventListener('mousemove', function(event) {
+		if (!inputMouseLock) return;
+
+		var movementX =
+			event.movementX ||
+			event.mozMovementX ||
+			event.webkitMovementX ||
+			0;
+		var movementY =
+			event.movementY ||
+			event.mozMovementY ||
+			event.webkitMovementY ||
+			0;
+
+		inputMouseX += movementX * 0.5;
+		inputMouseY += movementY * 0.5;
+	}, false);
+	document.addEventListener('mousedown', function(event) {
+		if (inputMouseLock) {
+			inputState.click = true;
+		} else {
+			lockMouse();
+		}
+	}, false);
+	document.addEventListener('mouseup', function(event) {
+		inputState.click = false;
+	}, false);
+}
+
+function lockMouse() {
+	var havePointerLock = 'pointerLockElement' in document ||
+		'mozPointerLockElement' in document ||
+		'webkitPointerLockElement' in document;
+
+	if (havePointerLock) {
+		var el = getCanvasElement();
+
+		el.requestPointerLock =
+			el.requestPointerLock ||
+			el.mozRequestPointerLock ||
+			el.webkitRequestPointerLock;
+
+		// Ask the browser to lock the pointer
+		el.requestPointerLock();
+	}
+}
+
+function keyListener(event, down) {
+	switch (event.keyCode) {
+		case 37 :	inputState.left = down; break;
+		case 38 :	inputState.up = down; break;
+		case 39 :	inputState.right = down; break;
+		case 40 :	inputState.down = down; break;
+		case 77 : if (down) {
+			lockMouse();
+		} break;
+	}
 }
 

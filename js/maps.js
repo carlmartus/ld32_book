@@ -17,6 +17,25 @@ var mapWalls = {
 	53: 2.0
 };
 
+function mapsPopulate(obj, cx, cy) {
+	switch (obj.type) {
+		case 'start' :
+			plSpawn(cx, cy);
+			break;
+
+		case 'munk' :
+			crSpawnMunk(cx, cy);
+			break;
+
+		case 'end' :
+			mapProxies.push(new Proxy(obj, function(obj) {
+				mapsLoad(obj.name);
+			}));
+			break;
+	}
+}
+
+
 
 function mapsGlobals() {
 	mapShader = loadShader(['map.vert'], ['map.frag'], function (prog) {
@@ -67,21 +86,7 @@ function mapsLoad(name) {
 		var cx = (o.x + o.width*0.5)*tex0TileInv;
 		var cy = (o.y + o.height*0.5)*tex0TileInv;
 
-		switch (o.type) {
-			case 'start' :
-				plSpawn(cx, cy);
-				break;
-
-			case 'munk' :
-				crSpawnMunk(cx, cy);
-				break;
-
-			case 'end' :
-				mapProxies.push(new Proxy(o, function(obj) {
-					mapsLoad(obj.name);
-				}));
-				break;
-		}
+		mapsPopulate(o, cx, cy);
 	}
 }
 

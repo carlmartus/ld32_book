@@ -92,7 +92,11 @@ function mapsLoad(name) {
 	gl.bindBuffer(gl.ARRAY_BUFFER, mapVbo);
 	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
 
+	plHaltControl();
+	paClear();
 	crReset();
+	infoClearText();
+
 	mapProxies = [];
 
 	// Populate map
@@ -104,13 +108,9 @@ function mapsLoad(name) {
 
 		mapsPopulate(o, cx, cy);
 	}
-
-	plHaltControl();
-	paClear();
-	paSpawn(plX, plY);
 }
 
-function mapsRestard() {
+function mapsRestart() {
 	mapsLoad(mapName);
 }
 

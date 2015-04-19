@@ -7,7 +7,7 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object type="start" x="283.08" y="161.924" width="13.8253" height="7.31922" rotation="-1.27971"/>
+  <object type="start" x="198.413" y="179.257" width="13.8253" height="7.31922" rotation="-1.27971"/>
   <object name="Looks like some kind of predator has been slayin here." type="info" x="180.5" y="65.5" width="43.5" height="42.5"/>
   <object name="Stick close to the monks in these parts of the wilderness. Evil lurks here." type="munk" x="268" y="29.5" width="4.5" height="5"/>
   <object type="munk" x="283.25" y="122.75" width="8" height="6.75"/>

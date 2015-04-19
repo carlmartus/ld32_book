@@ -3,6 +3,7 @@ var plCamX, plCamY, plCamZ;
 var plLookX, plLookY;
 var plSideX, plSideY;
 var plWalker;
+var plHp;
 
 var plDisabled = 0.0;
 var plDisabledDX, plDisabledDY;
@@ -24,10 +25,13 @@ function plSpawn(x, y, rot) {
 	plY = y;
 	plZ = 0.4;
 	inputMouseX = rot;
+	plHp = 100;
+
+	paSpawn(plX, plY);
 }
 
 function plWeapon(wId) {
-	console.log('Weapon ' + wId);
+	// console.log('Weapon ' + wId);
 }
 
 function plUpdateCage() {
@@ -50,10 +54,14 @@ function plFrame(ft) {
 		plX = aff[0];
 		plY = aff[1];
 
-		plWalker.setState(W_IDLE);
 		plWalker.frame(ft, plX, plY,
 				Math.atan2(-dirY, -dirX));
 	} else {
+		if (plHp <= 0) {
+			mapsRestart();
+			return;
+		}
+
 		var movX=0.0, movY=0.0;
 
 		if (inputState.up)		movX += 1.0;
@@ -110,16 +118,26 @@ function plHaltControl() {
 }
 
 function plHit(x, y, hp) {
-	plDisabled = hp*0.005;
-
-	var dX = plX - x;
-	var dY = plY - y;
-	var lenInv = 1.0 / Math.sqrt(dX*dX + dY*dY);
-
-	plDisabledDX = dX * lenInv * hp*0.001;
-	plDisabledDY = dY * lenInv * hp*0.001;
-
+	plHp -= hp;
 	paBloodHit(plX, plY, hp);
+
+	if (plHp <= 0) {
+		plDisabled = 4.0;
+		plDisabledDX = 0.0;
+		plDisabledDY = 0.0;
+		plWalker.setState(W_DEAD);
+
+	} else {
+		plDisabled = hp*0.005;
+
+		var dX = plX - x;
+		var dY = plY - y;
+		var lenInv = 1.0 / Math.sqrt(dX*dX + dY*dY);
+
+		plDisabledDX = dX * lenInv * hp*0.001;
+		plDisabledDY = dY * lenInv * hp*0.001;
+		plWalker.setState(W_IDLE);
+	}
 }
 
 function plDistance(x, y) {

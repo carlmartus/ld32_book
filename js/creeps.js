@@ -60,7 +60,7 @@ function crCloseEnemy(fromTeam, x, y, maxDist) {
 	}
 
 	if (fromTeam != TEAM_MONK) {
-		if (plDistance(x, y) <= bestLen) {
+		if (plHp > 0 && plDistance(x, y) <= bestLen) {
 			best = [ plX, plY ];
 		}
 	}
@@ -69,7 +69,7 @@ function crCloseEnemy(fromTeam, x, y, maxDist) {
 }
 
 function crInflict(fromTeam, x, y, rad, hp) {
-	if (fromTeam != TEAM_MONK) {
+	if (plHp > 0 && fromTeam != TEAM_MONK) {
 		if (plDistance(x, y) <= rad) {
 			plHit(x, y, hp);
 		}

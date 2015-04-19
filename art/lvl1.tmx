@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" source="tex0.tsx"/>
+ <layer name="Tile Layer 1" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJytk9ENwjAMRPNZyAKtMgF0AaALtGWCwgSQCaDL40i2dDriig8+3kdy6Tk5u20Iof0zF+GoDJW9XzSj6ElolIPu98Ii3IR7RSvrnbAn0M/0qOuX8BZWXbN/57w3qddV1zPVjOo1CU9hVM8tP08zvdz1rH6FrO8fnPOeZveN5JkpU+xV72g1zwe92XK3rNJGH5ke/PCOmFWCM7nSY+6rnT1B3zEry9rmooN987PcMtVewvfs4He1mcFZXNXP7mZ7nB//G9gP1Bv1G+H96OXNblfR+Z/hfDxmqufVNfjsB2+HNJo=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object type="start" x="24.1104" y="145.23" width="8.66667" height="9.66667" rotation="-366.303"/>
+  <object type="munk" x="146.333" y="132.667" width="7.66667" height="7"/>
+  <object type="munk" x="155.667" y="135.667" width="7.66667" height="7"/>
+  <object type="wolf" x="140.667" y="183.667" width="7.66667" height="7"/>
+  <object type="wolf" x="152.333" y="165.333" width="7.66667" height="7"/>
+  <object type="wolf" x="219.333" y="25.3333" width="7.66667" height="7"/>
+  <object type="wolf" x="228" y="27.6667" width="7.66667" height="7"/>
+  <object type="wolf" x="232.333" y="35" width="7.66667" height="7"/>
+  <object type="wolf" x="219.333" y="32" width="7.66667" height="7"/>
+  <object type="wolf" x="225" y="37.6667" width="7.66667" height="7"/>
+  <object type="wolf" x="240" y="45" width="7.66667" height="7"/>
+  <object name="Psst! Hello you can spawn new monks by pressing the mouse button." type="munk" x="31.3333" y="104.333" width="7.66667" height="7"/>
+  <object type="activate" x="8.66667" y="124.333" width="51" height="50.3333"/>
+ </objectgroup>
+</map>

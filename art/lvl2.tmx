@@ -3,7 +3,7 @@
  <tileset firstgid="1" source="tex0.tsx"/>
  <layer name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJzVk9ENgjAQhvtYcAEMEygLqCyAOIEygToBsLzXpJf8+dOW49GHL2kL93F3PRrnXCPchLPQZ/Z7CLGd4IVT9PAe2fpGG2OfwkuYYK17DxwNuYX4u/ARBljrHp2cM+bbkitwERbhCmdfytGTvwffDPHBtcb39HyJZ5VQRw7gC+eP6Bvh2QwuT/E1xGDPU/3EZ7m+6/wo3Q6f5pXLp9Q/rDnlsczUlMmxNFfqe8N941pnCGew5NMa9M5XWmvt+K+VfDwLqX7X1Gfua65u6xxZnFt95hoql75fq4/npeSy+v7hvdFQq8X3A2DqOAk=
+   eJzVk1EOgjAMhvc48AIYTqBcQOUCiCdQTqCeALi8XdImf5p1lEcfvmQb9KPtShNCaIgbcSZ6Y7+HFNsRkTixR++RrW+0HPskXsQEa9lH4OjILcXfiQ8xwFr26NQ5Y76tciUuxEJc4eyrcozK34NvhvjkWvk9OV/4rCJq5gC+dP5g3wjPZnBFFV9DDPY81098ZvVd5kfodvgkLyufUv+w5pzHM1OTkWNprsT3hvvGNeYoM1jySQ1y56taSx/xXyv59CxY/cY+675adXvnyOPc6rOuoQr5+/X69LyUXF7fP7w3Omr1+H5LBThs
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -66,5 +66,9 @@
   <object type="wolf" x="210.667" y="159.333" width="14" height="9.66667"/>
   <object type="wolf" x="210.667" y="159.333" width="14" height="9.66667"/>
   <object type="wolf" x="201" y="157.333" width="14" height="9.66667"/>
+  <object name="lvl3" type="end" x="185.667" y="255" width="50.6667" height="65.6667"/>
+  <object name="Never would I imagine that we would rival the very forces of nature. Careful ahead, they are mustering their forces." type="munk" x="217" y="62.1667" width="12" height="12"/>
+  <object type="wolf" x="207.333" y="209" width="14" height="9.66667"/>
+  <object type="wolf" x="203" y="248.334" width="14" height="9.66667"/>
  </objectgroup>
 </map>

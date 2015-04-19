@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" source="tex0.tsx"/>
+ <layer name="Tile Layer 1" width="15" height="15">
+  <data encoding="base64" compression="zlib">
+   eJyVktsNwjAMRfMJdIGiTFBYAMoCQCeATEA6Ac3y3Ei2dGU5kfg4Ul7H11U9hhBGMIMTuNFe1y3UOYMdmGg/iW/rKk9waDCIz3Vbvdj6URzm2PC8vuv+Bd4gOdmzeZdM1gdksII9WMiN5t1dcjTrC67i2p4j5em7TFn17tFxNU/9jbLq3QWUjpup3yRnq9Qqjf/ELvfqfbv9T9H0ya6tZ906W4Oca41C643OvPnozaZlCf5c/sMPEpYtFg==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object name="This is it brother. The final battle against nature. If we win this, the destiny of the world will no longer be in the hands of random processer. Entropy ends here." type="munk" x="73.6667" y="26.6667" width="7.66667" height="6"/>
+  <object type="start" x="27.6667" y="28" width="9.33333" height="6"/>
+  <object type="activate" x="19" y="11.6667" width="30" height="36"/>
+ </objectgroup>
+</map>

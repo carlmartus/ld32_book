@@ -1,5 +1,5 @@
 var spList;
-var spCount, spElems=6, spMax=spElems*200;
+var spCount, spElems=6, spMax=spElems*1000;
 var spShader, spShaderUnMvp, spShaderUnKMul;
 var spVbo;
 

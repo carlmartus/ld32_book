@@ -110,6 +110,10 @@ function mapsLoad(name) {
 	paSpawn(plX, plY);
 }
 
+function mapsRestard() {
+	mapsLoad(mapName);
+}
+
 function mapsProxTest() {
 	for (var i=0; i<mapProxies.length; i++) {
 		var p = mapProxies[i];

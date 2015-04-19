@@ -34,8 +34,8 @@
                  "type":"start",
                  "visible":true,
                  "width":13.8253,
-                 "x":31.7463,
-                 "y":83.257
+                 "x":283.079633333333,
+                 "y":161.923666666667
                 }, 
                 {
                  "height":42.5,
@@ -129,25 +129,11 @@
 
                     },
                  "rotation":0,
-                 "type":"wolf",
-                 "visible":true,
-                 "width":8,
-                 "x":124.25,
-                 "y":95.25
-                }, 
-                {
-                 "height":6.75,
-                 "name":"",
-                 "properties":
-                    {
-
-                    },
-                 "rotation":0,
                  "type":"munk",
                  "visible":true,
                  "width":8,
-                 "x":101,
-                 "y":94.25
+                 "x":290.583333333333,
+                 "y":141.5
                 }],
          "opacity":1,
          "type":"objectgroup",

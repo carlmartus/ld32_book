@@ -3,11 +3,11 @@
  <tileset firstgid="1" source="tex0.tsx"/>
  <layer name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJzl0rkKwkAQBuANamziTToRvDoPRE3tgZ0IXp2PoL6Cr+4fmMDwszExBCwsPphssn9mNnGNMW7OGjDIQVPyfHCgAEWLkrrHtSPK0FJ5+pr59KyudQ89We/StS2vLzMNqY7r4ZPofbb543r4hp6Zpf1mafPqCWz7kvI8qJCqygvIDraW9UD2tKFGOpS3hou4wlnqTYq8KUwoL+xpZsF9hntGMFaiLJ13hIVYwlzqE+Xt4aD2e+rsspzfDV6SGWat1Nll+b53eMBTzc3z/vr/+6e8N/ecIrw=
+   eJzl0rkKwkAQBuCIGpt4BjsRvDoPRE3tgZ0IXp2PoL6Cr+6/MIFh2El0DVhYfDBk2X9nduN7nudnrA59Rw1LXhNykIeCRZGtyTpU8krKWrweptRch87rJuT1aL6BqLUeksTn2ebXeviENqf/xftpebUU2vsl5QVQFiosLxK2sLF8j2hPC6pCW+St4EwucKJ6/UbeBMYiz/Q0tZB9mj1DGDFxFs87wJwsYEb1UeTtYM/2B+zuXO7vCk/KNFlLdncu73uDOzzY3HLeX/9//5T3AgNNImM=
   </data>
  </layer>
  <objectgroup name="lvl0">
-  <object type="start" x="26.1209" y="44.2199" width="10" height="8.5" rotation="-386.637">
+  <object type="start" x="29.8299" y="33.9349" width="10" height="8.5" rotation="-344.244">
    <properties>
     <property name="rot" value="1"/>
    </properties>
@@ -16,12 +16,12 @@
   <object type="munk" x="210" y="37.5" width="3.625" height="3.75"/>
   <object type="munk" x="187.75" y="186" width="3.625" height="3.75"/>
   <object type="munk" x="242.25" y="187.625" width="3.625" height="3.75"/>
-  <object name="lvl0" type="end" x="196" y="236" width="57.3333" height="82.6667"/>
+  <object name="lvl0" type="end" x="197.667" y="264" width="57.3333" height="57"/>
   <object type="munk" x="223.875" y="180.5" width="3.625" height="3.75"/>
   <object type="munk" x="222.75" y="201.375" width="3.625" height="3.75"/>
-  <object type="wolf" x="291.667" y="36.6663" width="7" height="6"/>
-  <object name="Welcome apprintice to the mythical library of the old druids. Some of them are willing to talk, others are a bit more busy." type="info" x="52.3333" y="13" width="18.6667" height="72.6667"/>
+  <object name="Welcome apprentice to the mythical library of the old monks. Some of them are willing to talk, others are a bit more busy." type="info" x="52.3333" y="13" width="26.3333" height="74.3333"/>
   <object name="Click the screen to capture the mouse. Use arrow keys to move." type="info" x="12.3333" y="13.3333" width="28.3333" height="74.3333"/>
-  <object name="Hello fellow monk. Looks like you need to freshen up your spell casting. Ask your brothers in the library." type="munk" x="121.125" y="30.9167" width="3.625" height="3.75"/>
+  <object name="Hello fellow monk. Looks like you need to freshen up your spell casting. Im sure your brothers will help you." type="munk" x="121.125" y="30.9167" width="3.625" height="3.75"/>
+  <object name="Continue down this hallway to go out into the wilderness." type="info" x="194" y="205.333" width="67.6667" height="61"/>
  </objectgroup>
 </map>

@@ -9,22 +9,14 @@ function paClear() {
 }
 
 function paBloodHit(x, y, hp) {
-	var amount = Math.round(hp / 10);
-	var sprites = [ TEX_BLOOD0, TEX_BLOOD1 ];
-
-	for (var i=0; i<amount; i++) {
-		var rX = 3.0*Math.random() - 1.5;
-		var rY = 3.0*Math.random() - 1.5;
-
-		paList.push(new Particle(
-					sprites[i % sprites.length],
-					2.0, x, y, 0.2,
-					rX, rY, 1.4,
-					0.25, 4.0));
-	}
+	paSpriteShower(
+			x, y, 0.25,
+			Math.round(hp / 10),
+			[ TEX_BLOOD0, TEX_BLOOD1, TEX_BLOOD2 ]);
 }
 
 function paSpawn(x, y) {
+	paSpriteShower(x, y, 0.1, 10, [ TEX_PLASMA ]);
 }
 
 function paInfo(x, y) {
@@ -33,6 +25,32 @@ function paInfo(x, y) {
 				2.0, x, y, 0.4,
 				0.0, 0.0, 0.15,
 				0.15, 0.0));
+}
+
+function paBlast(x, y, tX, tY) {
+	var dX = tX - x;
+	var dY = tY - y;
+	var dist = dist2(x, y, tX, tY);
+	var n = normMul(dX, dY, 5.0);
+
+	paList.push(new Particle(
+				TEX_PLASMA,
+				dist*0.3, x, y, 0.2,
+				n[0], n[1], 0.0,
+				0.5, 0.0));
+}
+
+function paSpriteShower(x, y, size, amount, sprites) {
+	for (var i=0; i<amount; i++) {
+		var rX = 3.0*Math.random() - 1.5;
+		var rY = 3.0*Math.random() - 1.5;
+
+		paList.push(new Particle(
+					sprites[i % sprites.length],
+					2.0, x, y, 0.2,
+					rX, rY, 1.4,
+					size, 4.0));
+	}
 }
 
 function paFrameRender(ft) {

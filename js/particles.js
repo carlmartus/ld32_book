@@ -4,6 +4,10 @@ function paGlobals() {
 	paList = [];
 }
 
+function paClear() {
+	paList = [];
+}
+
 function paBloodHit(x, y, hp) {
 	var amount = Math.round(hp / 10);
 	var sprites = [ TEX_BLOOD0, TEX_BLOOD1 ];
@@ -14,8 +18,8 @@ function paBloodHit(x, y, hp) {
 
 		paList.push(new Particle(
 					sprites[i % sprites.length],
-					2.0, x, y, 0.4,
-					rX, rY, 0.15,
+					2.0, x, y, 0.2,
+					rX, rY, 1.4,
 					0.25, 4.0));
 	}
 }

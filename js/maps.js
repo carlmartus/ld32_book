@@ -106,6 +106,7 @@ function mapsLoad(name) {
 	}
 
 	plHaltControl();
+	paClear();
 	paSpawn(plX, plY);
 }
 

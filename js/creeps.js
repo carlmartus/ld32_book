@@ -1,7 +1,7 @@
 var crList;
 
 function crSpawnMunk(x, y, infoMsg) {
-	var cr = new Creep(TEAM_MONK, x, y, 0.4, 0.4, makeBrianSpeaker,
+	var cr = new Creep(TEAM_MONK, x, y, 90, 0.4, 0.4, makeBrianSpeaker,
 			new Walker(3.0,
 				animation(getTexId(0, 8), 3),
 				animation(getTexId(0, 9), 3),
@@ -16,7 +16,7 @@ function crSpawnMunk(x, y, infoMsg) {
 }
 
 function crSpawnWolf(x, y) {
-	crList.push(new Creep(TEAM_NATURE, x, y, 0.4, 0.4, makeBrianGuard,
+	crList.push(new Creep(TEAM_NATURE, x, y, 120, 0.4, 0.4, makeBrianGuard,
 				new Walker(1.0,
 					animation(getTexId(3, 8), 3),
 					animation(getTexId(3, 9), 3),
@@ -38,10 +38,61 @@ function crFrame(ft) {
 	for (var i=0; i<crList.length; i++) crList[i].frame(ft);
 }
 
-function Creep(team, x, y, size, speed, brainMaker, walker) {
+function crCloseEnemy(fromTeam, x, y, maxDist) {
+	var best = null;
+	var bestLen = maxDist;
+
+	for (var i=0; i<crList.length; i++) {
+		var cr = crList[i];
+
+		if (cr.team != fromTeam && cr.getState() != W_DEAD) {
+			var dX = cr.x - x;
+			var dY = cr.y - y;
+
+			if (dX + dY > maxDist) continue;
+
+			var len = Math.sqrt(dX*dX + dY*dY);
+			if (len < bestLen) {
+				best = [ cr.x, cr.y ];
+				bestLen = len;
+			}
+		}
+	}
+
+	if (fromTeam != TEAM_MONK) {
+		if (plDistance(x, y) <= bestLen) {
+			best = [ plX, plY ];
+		}
+	}
+
+	return best;
+}
+
+function crInflict(fromTeam, x, y, rad, hp) {
+	if (fromTeam != TEAM_MONK) {
+		if (plDistance(x, y) <= rad) {
+			plHit(x, y, hp);
+		}
+	}
+
+	for (var i=0; i<crList.length; i++) {
+		var cr = crList[i];
+
+		if (cr.team != fromTeam && cr.getState() != W_DEAD) {
+			var dist = dist2(cr.x, cr.y, x, y);
+
+			if (dist < rad) {
+				cr.hit(x, y, hp);
+			}
+		}
+	}
+}
+
+function Creep(team, x, y, hp, size, speed, brainMaker, walker) {
 	this.team = team;
 	this.x = x;
 	this.y = y;
+	this.hp = hp;
 	this.dX = this.dY = 0.0;
 	this.rot = Math.random() * 2.0*Math.PI;
 	this.size = size;
@@ -73,16 +124,17 @@ Creep.prototype.walk = function(dX, dY) {
 	this.dY = dY*this.speed*this.speedMul;
 };
 
-Creep.prototype.walkTowards = function(x, y) {
+Creep.prototype.walkTowards = function(x, y, mul) {
 	var dX = x - this.x;
 	var dY = y - this.y;
 
 	var len = Math.sqrt(dX*dX + dY*dY);
+	if (mul) len *= mul;
 	dX = dX / len;
 	dY = dY / len;
 
 	this.walk(dX, dY);
-	return len / (this.speed * this.speedMul);
+	return Math.abs(len) / (this.speed * this.speedMul);
 };
 
 Creep.prototype.setSpeedMul = function(mul) {
@@ -109,6 +161,10 @@ Creep.prototype.die = function() {
 
 Creep.prototype.getState = function() {
 	return this.walker.getState();
+};
+
+Creep.prototype.hit = function(x, y, hp) {
+	this.nextAct = this.brain.hit(x, y, hp);
 };
 
 Creep.prototype.frame = function(ft) {

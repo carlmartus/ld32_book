@@ -3,7 +3,7 @@
  */
 
 var gl;
-var screenW = 640, screenH = 640;
+var screenW = 640, screenH = 520;
 var blockRender = false;
 var tex0;
 var mvp = null;

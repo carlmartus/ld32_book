@@ -131,7 +131,7 @@ function plCastSpell() {
 
 	paSpawn(aff[0], aff[1]);
 	crSpawnMunk(aff[0], aff[1], msg);
-	plManaCd = 3.0;
+	plManaCd = 1.4;
 }
 
 function plRender() {

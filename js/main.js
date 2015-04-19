@@ -12,6 +12,7 @@ var proxTest = 0.0;
 var inputMouseX = 0;
 var inputMouseY = 0;
 var inputMouseLock = false;
+var inputMouseBlockNext = false;
 var inputState = {
 	click: false,
 	up: false,
@@ -131,7 +132,11 @@ function listenMouse() {
 	}, false);
 	document.addEventListener('mousedown', function(event) {
 		if (inputMouseLock) {
-			inputState.click = true;
+			if (inputMouseBlockNext) {
+				inputMouseBlockNext = false;
+			} else {
+				inputState.click = true;
+			}
 		} else {
 			lockMouse();
 		}
@@ -155,6 +160,7 @@ function lockMouse() {
 			el.webkitRequestPointerLock;
 
 		// Ask the browser to lock the pointer
+		inputMouseBlockNext = true;
 		el.requestPointerLock();
 	}
 }

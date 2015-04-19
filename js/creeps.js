@@ -15,6 +15,17 @@ function crSpawnMunk(x, y, infoMsg) {
 	crList.push(cr);
 }
 
+function crSpawnSpider(x, y) {
+	crList.push(new Creep(TEAM_NATURE, x, y, 90, 0.4, 0.4, makeBrianGuard,
+				new Walker(1.0,
+					animation(getTexId(6, 8), 3),
+					animation(getTexId(6, 9), 3),
+					animation(getTexId(6, 10), 3),
+					animation(getTexId(6, 11), 3),
+					animation(getTexId(6, 12), 3),
+					animation(getTexId(6, 13), 3))));
+}
+
 function crSpawnWolf(x, y) {
 	crList.push(new Creep(TEAM_NATURE, x, y, 120, 0.4, 0.4, makeBrianGuard,
 				new Walker(1.0,
@@ -83,6 +94,7 @@ function crInflict(fromTeam, x, y, rad, hp) {
 
 			if (dist < rad) {
 				cr.hit(x, y, hp);
+				return;
 			}
 		}
 	}

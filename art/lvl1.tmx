@@ -20,5 +20,6 @@
   <object type="wolf" x="240" y="45" width="7.66667" height="7"/>
   <object name="Psst! Hello you can spawn new monks by pressing the mouse button." type="munk" x="31.3333" y="104.333" width="7.66667" height="7"/>
   <object type="activate" x="8.66667" y="124.333" width="51" height="50.3333"/>
+  <object name="lvl2" type="end" x="266.667" y="11.3333" width="62" height="44.6667"/>
  </objectgroup>
 </map>

@@ -4,11 +4,11 @@
   TileMaps[name] = data;
  } else {
   onTileMapLoaded(name,data);
- }})("tex0",
+ }})("lvl2",
 { "height":20,
  "layers":[
         {
-         "data":[6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 17, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 18, 6, 6, 6, 6, 21, 1, 3, 4, 4, 4, 4, 4, 5, 3, 4, 5, 3, 4, 5, 19, 6, 6, 6, 6, 21, 7, 19, 6, 6, 6, 6, 6, 21, 19, 6, 21, 19, 6, 21, 19, 6, 6, 6, 6, 33, 4, 34, 6, 6, 6, 6, 6, 21, 35, 36, 37, 35, 36, 37, 19, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 33, 4, 4, 4, 5, 3, 4, 34, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 21, 19, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 21, 19, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 21, 19, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 54, 54, 54, 54, 69, 67, 54, 54, 54, 54, 54, 6, 6, 6, 6, 6, 6, 6, 6, 6, 54, 65, 84, 84, 85, 83, 84, 66, 54, 54, 54, 6, 6, 6, 6, 6, 6, 6, 6, 6, 54, 69, 49, 49, 49, 49, 49, 67, 54, 54, 54, 6, 6, 6, 6, 6, 6, 6, 6, 6, 54, 81, 52, 52, 53, 51, 52, 82, 54, 54, 54, 6, 6, 6, 6, 6, 6, 6, 6, 6, 54, 54, 54, 54, 69, 67, 54, 54, 54, 54, 54, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 21, 19, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 21, 19, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 21, 19, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 21, 19, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 21, 19, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 21, 19, 6, 6, 6, 6, 6],
+         "data":[24, 24, 58, 42, 59, 24, 58, 42, 59, 24, 24, 24, 27, 8, 8, 8, 8, 8, 8, 8, 24, 58, 43, 8, 41, 42, 43, 8, 41, 42, 42, 42, 43, 8, 8, 8, 8, 8, 8, 8, 24, 27, 8, 89, 90, 91, 89, 90, 90, 91, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 58, 43, 89, 73, 106, 72, 73, 106, 106, 72, 91, 8, 8, 8, 8, 8, 8, 8, 8, 8, 27, 89, 73, 106, 106, 56, 122, 57, 106, 106, 107, 8, 8, 8, 8, 8, 8, 8, 8, 8, 27, 121, 122, 57, 56, 123, 8, 121, 122, 122, 123, 8, 8, 8, 8, 8, 8, 8, 8, 8, 74, 11, 8, 121, 123, 8, 8, 9, 10, 10, 11, 8, 8, 8, 8, 8, 8, 8, 8, 8, 24, 27, 8, 8, 8, 8, 8, 25, 24, 24, 27, 8, 8, 8, 8, 8, 8, 8, 8, 8, 24, 27, 8, 8, 8, 9, 10, 75, 24, 24, 27, 8, 8, 8, 8, 8, 8, 8, 8, 8, 24, 74, 11, 9, 10, 75, 24, 24, 24, 24, 27, 8, 8, 8, 8, 8, 8, 8, 8, 8, 24, 24, 27, 25, 24, 24, 24, 24, 24, 24, 27, 8, 8, 8, 8, 8, 8, 8, 8, 8, 24, 58, 43, 25, 24, 24, 24, 58, 42, 42, 43, 8, 8, 8, 8, 8, 8, 8, 8, 8, 58, 43, 8, 25, 24, 24, 24, 74, 11, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 27, 8, 8, 41, 59, 24, 24, 24, 27, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 27, 8, 8, 8, 41, 59, 24, 24, 27, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 74, 11, 8, 8, 9, 75, 24, 24, 27, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 24, 74, 11, 9, 75, 24, 24, 24, 27, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 24, 24, 27, 25, 24, 24, 24, 58, 43, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 24, 24, 27, 25, 24, 24, 24, 27, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 24, 24, 74, 75, 24, 24, 24, 27, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8],
          "height":20,
          "name":"Tile Layer 1",
          "opacity":1,
@@ -20,181 +20,279 @@
         }, 
         {
          "draworder":"topdown",
-         "height":0,
-         "name":"lvl0",
+         "height":20,
+         "name":"Object Layer 1",
          "objects":[
                 {
-                 "height":8.5,
+                 "height":4.00701467493383,
                  "name":"",
                  "properties":
                     {
-                     "rot":"1"
+
                     },
-                 "rotation":-344.2435267013,
+                 "rotation":-89.9505602444634,
                  "type":"start",
                  "visible":true,
-                 "width":10,
-                 "x":24.1632433003605,
-                 "y":29.1015260880548
+                 "width":2.36637416074403,
+                 "x":46.6200411953007,
+                 "y":287.368526211289
                 }, 
                 {
-                 "height":3.75,
+                 "height":12,
+                 "name":"Careful up ahead there's a nest of creeps. Make sure you use your spell to spawn enought of us.",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"munk",
+                 "visible":true,
+                 "width":12,
+                 "x":38,
+                 "y":198.5
+                }, 
+                {
+                 "height":13,
                  "name":"",
                  "properties":
                     {
 
                     },
                  "rotation":0,
-                 "type":"munk",
+                 "type":"spider",
                  "visible":true,
-                 "width":3.625,
-                 "x":209.875,
-                 "y":62
+                 "width":17,
+                 "x":54,
+                 "y":47.5
                 }, 
                 {
-                 "height":3.75,
+                 "height":20.625,
                  "name":"",
                  "properties":
                     {
 
                     },
                  "rotation":0,
-                 "type":"munk",
+                 "type":"activate",
                  "visible":true,
-                 "width":3.625,
-                 "x":210,
-                 "y":37.5
+                 "width":41.125,
+                 "x":28.625,
+                 "y":274.75
                 }, 
                 {
-                 "height":3.75,
+                 "height":13,
                  "name":"",
                  "properties":
                     {
 
                     },
                  "rotation":0,
-                 "type":"munk",
+                 "type":"spider",
                  "visible":true,
-                 "width":3.625,
-                 "x":187.75,
-                 "y":186
+                 "width":17,
+                 "x":54,
+                 "y":47.5
                 }, 
                 {
-                 "height":3.75,
+                 "height":13,
                  "name":"",
                  "properties":
                     {
 
                     },
                  "rotation":0,
-                 "type":"munk",
+                 "type":"spider",
                  "visible":true,
-                 "width":3.625,
-                 "x":242.25,
-                 "y":187.625
+                 "width":17,
+                 "x":54,
+                 "y":47.5
                 }, 
                 {
-                 "height":57.0000333333333,
-                 "name":"lvl0",
-                 "properties":
-                    {
-
-                    },
-                 "rotation":0,
-                 "type":"end",
-                 "visible":true,
-                 "width":57.3333,
-                 "x":197.666666666667,
-                 "y":264
-                }, 
-                {
-                 "height":3.75,
+                 "height":13,
                  "name":"",
                  "properties":
                     {
 
                     },
                  "rotation":0,
-                 "type":"munk",
+                 "type":"spider",
                  "visible":true,
-                 "width":3.625,
-                 "x":223.875,
-                 "y":180.5
+                 "width":17,
+                 "x":54,
+                 "y":47.5
                 }, 
                 {
-                 "height":3.75,
+                 "height":13,
                  "name":"",
                  "properties":
                     {
 
                     },
                  "rotation":0,
-                 "type":"munk",
+                 "type":"spider",
                  "visible":true,
-                 "width":3.625,
-                 "x":222.75,
-                 "y":201.375
+                 "width":17,
+                 "x":54,
+                 "y":47.5
                 }, 
                 {
-                 "height":74.3333333333333,
-                 "name":"Welcome new one, to the mythical library of the old monks. Some of them are willing to talk, others are a bit more busy.",
+                 "height":13,
+                 "name":"",
                  "properties":
                     {
 
                     },
                  "rotation":0,
-                 "type":"info",
+                 "type":"spider",
                  "visible":true,
-                 "width":26.3333333333333,
-                 "x":56.3333333333333,
-                 "y":12.5
+                 "width":17,
+                 "x":54,
+                 "y":47.5
                 }, 
                 {
-                 "height":74.3333333333333,
-                 "name":"Click the screen to capture the mouse. Use arrow keys to move.",
+                 "height":13,
+                 "name":"",
                  "properties":
                     {
 
                     },
                  "rotation":0,
-                 "type":"info",
+                 "type":"spider",
                  "visible":true,
-                 "width":28.3333333333333,
-                 "x":12.3333333333333,
-                 "y":13.3333333333333
+                 "width":17,
+                 "x":54,
+                 "y":47.5
                 }, 
                 {
-                 "height":3.75,
-                 "name":"Hello fellow monk. Looks like you need to freshen up your spell casting. I'm sure your brothers will help you.",
+                 "height":13,
+                 "name":"",
                  "properties":
                     {
 
                     },
                  "rotation":0,
-                 "type":"munk",
+                 "type":"spider",
                  "visible":true,
-                 "width":3.625,
-                 "x":125.458333333333,
-                 "y":32.9166666666667
+                 "width":17,
+                 "x":54,
+                 "y":47.5
                 }, 
                 {
-                 "height":61,
-                 "name":"Continue down this hallway to go out into the wilderness.",
+                 "height":13,
+                 "name":"",
                  "properties":
                     {
 
                     },
                  "rotation":0,
-                 "type":"info",
+                 "type":"spider",
                  "visible":true,
-                 "width":67.6666666666666,
-                 "x":194,
-                 "y":205.333333333333
+                 "width":17,
+                 "x":54,
+                 "y":47.5
+                }, 
+                {
+                 "height":13,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"spider",
+                 "visible":true,
+                 "width":17,
+                 "x":54,
+                 "y":47.5
+                }, 
+                {
+                 "height":13,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"spider",
+                 "visible":true,
+                 "width":17,
+                 "x":54,
+                 "y":47.5
+                }, 
+                {
+                 "height":13,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"spider",
+                 "visible":true,
+                 "width":17,
+                 "x":54,
+                 "y":47.5
+                }, 
+                {
+                 "height":13,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"spider",
+                 "visible":true,
+                 "width":17,
+                 "x":54,
+                 "y":47.5
+                }, 
+                {
+                 "height":13,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"spider",
+                 "visible":true,
+                 "width":17,
+                 "x":54,
+                 "y":47.5
+                }, 
+                {
+                 "height":13,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"spider",
+                 "visible":true,
+                 "width":17,
+                 "x":54,
+                 "y":47.5
+                }, 
+                {
+                 "height":13,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"spider",
+                 "visible":true,
+                 "width":17,
+                 "x":54,
+                 "y":47.5
                 }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
-         "width":0,
+         "width":20,
          "x":0,
          "y":0
         }],

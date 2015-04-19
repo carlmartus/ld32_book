@@ -120,7 +120,7 @@ function plCastSpell() {
 	var msg = null;
 	if (!plHasCasted) {
 		plHasCasted = true;
-		msg = 'With this spell the monks shall rise above all other. One will, our will shall rule the universe';
+		msg = 'With this spell the monks shall rise above all other. One will, our will, shall rule the universe';
 	}
 
 	var aff = mapsWalk(

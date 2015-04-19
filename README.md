@@ -2,6 +2,8 @@
 
 Challenge theme "An Unconventional Weapon".
 
+[Ludum dare page](http://ludumdare.com/compo/ludum-dare-32/?action=preview&uid=31158)
+
 ![Screenshot](extra/screen0.jpg)
 
 ## Development dependencies

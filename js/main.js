@@ -163,6 +163,11 @@ function keyListener(event, down) {
 		case 77 : if (down) {
 			lockMouse();
 		} break;
+		case 49 :
+		case 50 :
+		case 51 : if (down) {
+			plWeapon(event.keyCode - 49);
+		} break;
 	}
 }
 

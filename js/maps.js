@@ -32,6 +32,10 @@ function mapsPopulate(obj, cx, cy) {
 			crSpawnMunk(cx, cy);
 			break;
 
+		case 'wolf' :
+			crSpawnWolf(cx, cy);
+			break;
+
 		case 'end' :
 			mapProxies.push(new Proxy(obj, function(obj) {
 				mapsLoad(obj.name);

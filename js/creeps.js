@@ -1,11 +1,7 @@
 var crList;
 
-function crReset() {
-	crList = [];
-}
-
 function crSpawnMunk(x, y) {
-	crList.push(new Creep(x, y, 0.4, 0.4, makeBrianPassive,
+	crList.push(new Creep(x, y, 0.4, 0.4, makeBrianSpeaker,
 				new Walker(3.0,
 					animation(getTexId(0, 8), 3),
 					animation(getTexId(0, 9), 3),
@@ -13,6 +9,21 @@ function crSpawnMunk(x, y) {
 					animation(getTexId(0, 11), 3),
 					animation(getTexId(0, 12), 3),
 					animation(getTexId(0, 13), 3))));
+}
+
+function crSpawnWolf(x, y) {
+	crList.push(new Creep(x, y, 0.4, 0.4, makeBrianGuard,
+				new Walker(3.0,
+					animation(getTexId(3, 8), 3),
+					animation(getTexId(3, 9), 3),
+					animation(getTexId(3, 10), 3),
+					animation(getTexId(3, 11), 3),
+					animation(getTexId(3, 12), 3),
+					animation(getTexId(3, 13), 3))));
+}
+
+function crReset() {
+	crList = [];
 }
 
 function crRender() {
@@ -39,12 +50,39 @@ function Creep(x, y, size, speed, brainMaker, walker) {
 	this.nextAct = this.brain.init();
 }
 
-Creep.prototype.walk = function(dX, dY) {
+Creep.prototype.faceDirection = function(dX, dY) {
 	this.rot = Math.atan2(-dY, -dX);
+	this.walker.refreshDirection(this.rot);
+};
+
+Creep.prototype.faceTowards = function(x, y) {
+	this.faceDirection(
+			x - this.x,
+			y - this.y);
+};
+
+Creep.prototype.walk = function(dX, dY) {
+	this.faceDirection(dX, dY);
 	this.walker.setState(W_WALK);
 	this.dX = dX*this.speed*this.speedMul;
 	this.dY = dY*this.speed*this.speedMul;
-	this.walker.refreshDirection(this.rot);
+};
+
+Creep.prototype.walkTowards = function(x, y) {
+	var dX = x - this.x;
+	var dY = y - this.y;
+
+	var len = Math.sqrt(dX*dX + dY*dY);
+	dX = dX / len;
+	dY = dY / len;
+
+	this.walk(dX, dY);
+	return len / (this.speed * this.speedMul);
+};
+
+Creep.prototype.setSpeedMul = function(mul) {
+	this.walker.setState(mul);
+	this.speedMul = mul;
 };
 
 Creep.prototype.noWalk = function() {
@@ -56,8 +94,16 @@ Creep.prototype.idle = function() {
 	this.walker.setState(W_IDLE);
 };
 
+Creep.prototype.attack = function() {
+	this.walker.setState(W_FIRE);
+};
+
 Creep.prototype.die = function() {
 	this.walker.setState(W_DEAD);
+};
+
+Creep.prototype.getState = function() {
+	return this.walker.getState();
 };
 
 Creep.prototype.frame = function(ft) {

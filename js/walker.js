@@ -31,6 +31,10 @@ function Walker(speed, front, back, left, right, attack, dead) {
 	this.listDead = dead;
 }
 
+Walker.prototype.setSpeed = function(speed) {
+	this.speed = speed;
+};
+
 Walker.prototype.setState = function(state) {
 	this.state = state;
 	switch (state) {
@@ -38,6 +42,10 @@ Walker.prototype.setState = function(state) {
 		case W_DEAD :
 			this.t = 0.0;
 	}
+};
+
+Walker.prototype.getState = function() {
+	return this.state;
 };
 
 Walker.prototype.refreshDirection = function(newRot) {

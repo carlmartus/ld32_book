@@ -23,6 +23,10 @@ function plSpawn(x, y, rot) {
 	inputMouseX = rot;
 }
 
+function plWeapon(wId) {
+	console.log('Weapon ' + wId);
+}
+
 function plUpdateCage() {
 	plLookX = Math.cos(plRx);
 	plLookY = Math.sin(plRx);
@@ -88,5 +92,11 @@ function plHaltControl() {
 	inputState.right = false;
 	inputState.left = false;
 	inputState.click = false;
+}
+
+function plDistance(x, y) {
+	var dX = plX - x;
+	var dY = plY - y;
+	return Math.sqrt(dX*dX + dY*dY);
 }
 

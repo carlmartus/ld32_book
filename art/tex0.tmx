@@ -21,7 +21,7 @@
   <object type="munk" x="222.75" y="201.375" width="3.625" height="3.75"/>
   <object name="Welcome apprentice to the mythical library of the old monks. Some of them are willing to talk, others are a bit more busy." type="info" x="52.3333" y="13" width="26.3333" height="74.3333"/>
   <object name="Click the screen to capture the mouse. Use arrow keys to move." type="info" x="12.3333" y="13.3333" width="28.3333" height="74.3333"/>
-  <object name="Hello fellow monk. Looks like you need to freshen up your spell casting. I'm sure your brothers will help you." type="munk" x="121.125" y="30.9167" width="3.625" height="3.75"/>
+  <object name="Hello fellow monk. Looks like you need to freshen up your spell casting. I'm sure your brothers will help you." type="munk" x="165.792" y="33.5833" width="3.625" height="3.75"/>
   <object name="Continue down this hallway to go out into the wilderness." type="info" x="194" y="205.333" width="67.6667" height="61"/>
  </objectgroup>
 </map>

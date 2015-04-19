@@ -94,7 +94,7 @@ function makeBrianGuard(cr) {
 					cr.attack();
 					this.swing = true;
 					cr.setSpeedMul(12.0);
-					return 0.1;
+					return 0.05 * (1.0 + Math.random());
 				}
 
 				cr.setSpeedMul(6.0);
